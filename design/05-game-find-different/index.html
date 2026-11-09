@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>تیزبین - تفاوت تصویر</title>
+<!-- Google Fonts: Vazirmatn -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#f9f9f9",
+            "danger-text": "#CE2020",
+            "orange": "#FF8A3D",
+            "support-strong": "#A978FF",
+            "accent-pressed": "#0E6D0E",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#3f4a3b",
+            "on-secondary-fixed": "#002200",
+            "surface": "#f9f9f9",
+            "secondary": "#006e06",
+            "control-border": "#6DA06D",
+            "surface-alt": "#E8F5E8",
+            "divider": "#D3E4D3",
+            "surface-tint": "#006e06",
+            "surface-dim": "#dadada",
+            "on-secondary-fixed-variant": "#005303",
+            "on-primary": "#ffffff",
+            "outline-variant": "#bfcab7",
+            "success-text": "#0E7C3A",
+            "inverse-surface": "#2f3131",
+            "danger-bg": "#FBE5E5",
+            "on-tertiary-container": "#ecdfff",
+            "sky-blue": "#3B9EFF",
+            "secondary-fixed-dim": "#79dd68",
+            "on-error-container": "#93000a",
+            "surface-container": "#eeeeee",
+            "text-primary": "#0C1F0C",
+            "warning-text": "#A75906",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f0f1f1",
+            "surface-container-low": "#f3f3f4",
+            "apple-red": "#E5484D",
+            "surface-container-highest": "#e2e2e2",
+            "secondary-fixed": "#94fa81",
+            "surface-container-high": "#e8e8e8",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#1a1c1c",
+            "surface-variant": "#e2e2e2",
+            "secondary-container": "#91f77e",
+            "on-primary-fixed-variant": "#005303",
+            "primary-fixed-dim": "#7bdc6b",
+            "inverse-primary": "#7bdc6b",
+            "background": "#F4FCF4",
+            "text-secondary": "#455745",
+            "success-bg": "#E3F4E9",
+            "accent-tint": "#DDF0DD",
+            "on-tertiary-fixed-variant": "#503b7c",
+            "warning-bg": "#FAEFE1",
+            "on-primary-container": "#99fc86",
+            "error": "#ba1a1a",
+            "primary-container": "#0f770f",
+            "on-primary-fixed": "#002201",
+            "tertiary-container": "#705a9e",
+            "tertiary-fixed-dim": "#d2bbff",
+            "outline": "#6f7a6a",
+            "accent-fill": "#0F770F",
+            "on-tertiary-fixed": "#230a4e",
+            "primary": "#005c04",
+            "primary-fixed": "#97fa84",
+            "on-background": "#1a1c1c",
+            "text-tertiary": "#5C705C",
+            "tertiary-fixed": "#eaddff",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "tertiary": "#574284",
+            "on-secondary-container": "#007306",
+            "banana-yellow": "#F5C518"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "1.25rem",
+            "space-lg": "1rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-md": "0.75rem"
+          },
+          "fontFamily": {
+            "title": ["Vazirmatn"],
+            "caption": ["Vazirmatn"],
+            "display": ["Vazirmatn"],
+            "body": ["Vazirmatn"],
+            "label": ["Vazirmatn"]
+          },
+          "fontSize": {
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "800"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "600"
+              }
+            ]
+          },
+          "boxShadow": {
+            "soft": "0 1px 2px rgba(12,31,12,0.04), 0 8px 24px rgba(12,31,12,0.06)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    @keyframes subtle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .pulse-focal {
+      animation: subtle-pulse 3s ease-in-out infinite;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex justify-center items-start text-text-primary">
+<!-- Mobile Simulator Frame 393px -->
+<main class="w-full max-w-[393px] min-h-screen bg-background flex flex-col justify-between px-5 pt-4 pb-8 relative overflow-hidden">
+<!-- Top Bar: Exit action & Header Status -->
+<header class="w-full flex flex-col gap-3">
+<!-- Topmost row: Quit Button & Title Indicator -->
+<div class="flex items-center justify-between w-full">
+<!-- Discreet Pause/Exit Action -->
+<button aria-label="انصراف از بازی" class="flex items-center gap-1 py-1.5 px-3 rounded-full bg-surface-container-lowest border border-divider text-text-secondary active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span class="font-caption text-caption text-text-secondary">انصراف</span>
+</button>
+<!-- Current Mini-Game Tag -->
+<div class="font-label text-label text-primary font-bold">
+          تیزبین • مرحله ۱
+        </div>
+</div>
+<!-- Main Game Header: Level, Circular Timer, Score -->
+<div class="flex items-center justify-between w-full mt-1">
+<!-- Right: Challenge Counter Chip -->
+<div class="bg-accent-tint text-accent-fill rounded-full px-3.5 py-1.5 font-label text-label font-bold flex items-center gap-1 border border-divider/40">
+<span>مرحله</span>
+<span class="tracking-wide">۱ از ۱۵</span>
+</div>
+<!-- Center: Circular Countdown Timer -->
+<div class="relative flex items-center justify-center w-20 h-20">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 80 80">
+<!-- Background Ring -->
+<circle cx="40" cy="40" fill="transparent" r="34" stroke="#E8F5E8" stroke-width="5"></circle>
+<!-- Animated Dynamic Progress Ring -->
+<circle class="transition-all duration-1000 ease-linear" cx="40" cy="40" fill="transparent" r="34" stroke="#0F770F" stroke-dasharray="213.6" stroke-dashoffset="38" stroke-linecap="round" stroke-width="5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pt-0.5">
+<span class="font-display text-display text-text-primary leading-none font-extrabold">۸۴</span>
+<span class="font-caption text-[11px] text-text-secondary leading-tight mt-0.5">ثانیه</span>
+</div>
+</div>
+<!-- Left: Star & Score Chip -->
+<div class="bg-accent-tint text-accent-fill rounded-full px-3.5 py-1.5 font-label text-label font-bold flex items-center gap-1 border border-divider/40">
+<span class="text-banana-yellow">⭐</span>
+<span class="tracking-wider">۰</span>
+</div>
+</div>
+<!-- 15-Segment Thin Progress Bar -->
+<div aria-label="پیشرفت مراحل" class="w-full flex items-center gap-1 mt-1 px-0.5">
+<!-- 1st Segment: Active / Filled -->
+<div class="h-1.5 flex-1 rounded-full bg-accent-fill"></div>
+<!-- 2 through 15: Inactive Segments -->
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-alt"></div>
+</div>
+</header>
+<!-- Game Prompt Section -->
+<section class="text-center my-3">
+<h1 class="font-title text-title text-text-primary font-bold tracking-tight">
+        کدام تصویر فرق دارد؟
+      </h1>
+<p class="font-body text-label text-text-secondary mt-1">
+        روی تصویر متفاوت بزن
+      </p>
+</section>
+<!-- Focal Element: 3x3 Game Board Grid -->
+<section class="w-full flex items-center justify-center my-auto">
+<div class="w-full grid grid-cols-3 gap-3.5" id="gameGrid">
+<!-- Tile 1: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<!-- Leaf -->
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<!-- Stem -->
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<!-- Apple Body -->
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+<!-- Tile 2: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+<!-- Tile 3: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+<!-- Tile 4: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+<!-- Tile 5 (ROW 2, COL 2): THE DIFFERENT ONE - GREEN APPLE -->
+<button aria-label="سیب سبز متفاوت" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-accent-fill hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" id="targetTile" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<!-- Leaf -->
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#005C04"></path>
+<!-- Stem -->
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<!-- Apple Body (Crisp Green) -->
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#0F770F"></path>
+</svg>
+</button>
+<!-- Tile 6: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+<!-- Tile 7: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+<!-- Tile 8: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+<!-- Tile 9: Red Apple -->
+<button aria-label="سیب سرخ" class="aspect-square bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider shadow-soft flex items-center justify-center p-3.5 transition-all duration-150 active:scale-95 active:border-control-border hover:border-control-border focus:outline-none focus:ring-2 focus:ring-accent-fill" type="button">
+<svg class="w-full h-full" fill="none" viewbox="0 0 100 100">
+<path d="M50 28C56 16 66 18 68 25C68 33 58 33 50 28Z" fill="#0F770F"></path>
+<path d="M49 29C48 22 51 17 54 13" stroke="#6C4524" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M50 35C44 26 26 24 19 40C11 58 20 86 50 88C80 86 89 58 81 40C74 24 56 26 50 35Z" fill="#E5484D"></path>
+</svg>
+</button>
+</div>
+</section>
+<!-- Bottom Hint & Reward Information -->
+<footer class="w-full flex flex-col items-center gap-3 pt-2">
+<!-- Soft Info Card -->
+<div class="w-full bg-surface-alt/70 border border-divider/60 rounded-xl py-2.5 px-4 flex items-center justify-center gap-2 text-text-tertiary">
+<span class="material-symbols-outlined text-[18px] text-accent-fill">bolt</span>
+<span class="font-caption text-caption">هر پاسخ درست ۱۰۰ امتیاز + پاداش سرعت</span>
+</div>
+<!-- Quick Helper Chips or Guidance -->
+<div class="flex items-center justify-between w-full text-text-tertiary px-1 text-xs">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>ضربه به تصویر</span>
+</div>
+<div class="flex items-center gap-1 text-text-tertiary hover:text-accent-fill transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+<span>راهنما (۳)</span>
+</div>
+</div>
+</footer>
+</main>
+<!-- Inline Interaction for Polish -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const targetTile = document.getElementById('targetTile');
+      const allButtons = document.querySelectorAll('#gameGrid button');
+
+      allButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          if (btn === targetTile) {
+            // Correct Answer state
+            btn.classList.add('bg-success-bg', 'border-accent-fill', 'scale-105');
+            setTimeout(() => {
+              btn.classList.remove('scale-105');
+            }, 300);
+          } else {
+            // Wrong Answer State
+            btn.classList.add('bg-danger-bg', 'border-danger-text', 'shake');
+            setTimeout(() => {
+              btn.classList.remove('bg-danger-bg', 'border-danger-text', 'shake');
+            }, 400);
+          }
+        });
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ساخت پروفایل تیزبین</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #F4FCF4;
+      color: #0C1F0C;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-0 sm:p-4 bg-[#e5efe5]">
+
+  <!-- Mobile Screen Container (393px width standard frame) -->
+  <div class="w-full max-w-[393px] h-[852px] bg-[#F4FCF4] flex flex-col relative overflow-hidden shadow-2xl rounded-[40px] border border-[#d8ecd8]">
+
+    <!-- Status Bar (RTL friendly) -->
+    <div class="pt-3 px-7 flex justify-between items-center text-xs font-semibold text-[#0C1F0C] z-20 select-none">
+      <span class="tracking-normal text-[14px]">۹:۴۱</span>
+      <div class="flex items-center space-x-1.5 space-x-reverse">
+        <svg class="w-4 h-4 fill-current text-[#0C1F0C]" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+        </svg>
+        <svg class="w-4 h-4 fill-current text-[#0C1F0C]" viewBox="0 0 24 24">
+          <path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A17.93 17.93 0 0012 4z"/>
+        </svg>
+        <div class="w-5 h-2.5 border border-[#0C1F0C] rounded-sm p-0.5 flex items-center">
+          <div class="h-full w-full bg-[#0C1F0C] rounded-xs"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top App Bar / Header -->
+    <header class="pt-4 px-5 pb-2 flex items-center justify-between z-10">
+      <!-- Back arrow on the top right (RTL: pointing right) -->
+      <button class="w-11 h-11 rounded-full bg-white border border-[#D3E4D3] flex items-center justify-center text-[#0C1F0C] hover:bg-[#E8F5E8] active:scale-95 transition shadow-sm" aria-label="بازگشت">
+        <svg class="w-6 h-6 stroke-[#0C1F0C]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+
+      <!-- Step indicator chip -->
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DDF0DD] text-[#0F770F] text-[13px] font-semibold">
+        <span>مرحله ۱ از ۲</span>
+      </div>
+    </header>
+
+    <!-- Main Scrollable Content Area -->
+    <main class="flex-1 px-5 pt-2 pb-6 overflow-y-auto no-scrollbar flex flex-col justify-between">
+      <div>
+        <!-- Screen Title & Caption -->
+        <div class="mb-5 text-right">
+          <h1 class="text-[32px] font-extrabold text-[#0C1F0C] leading-tight tracking-tight">
+            ساخت پروفایل
+          </h1>
+          <p class="text-[14px] text-[#455745] font-normal mt-1">
+            فقط چند ثانیه طول می‌کشد
+          </p>
+        </div>
+
+        <!-- Avatar Selection Section -->
+        <section class="mb-6">
+          <div class="flex items-center justify-between mb-3">
+            <label class="text-[14px] font-semibold text-[#0C1F0C]">
+              تصویر خودت را انتخاب کن
+            </label>
+            <span class="text-[13px] text-[#0F770F] font-medium bg-[#DDF0DD] px-2.5 py-0.5 rounded-full">
+              ۶ تصویر طبیعی
+            </span>
+          </div>
+
+          <!-- Row of 6 round real-photo avatars -->
+          <div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1 px-0.5">
+            
+            <!-- 1. Young Woman (Selected: 3px #107C10 ring + small check badge) -->
+            <div class="relative flex-shrink-0 cursor-pointer group">
+              <div class="w-[56px] h-[56px] rounded-full p-[2px] ring-[3px] ring-[#107C10] bg-white transition transform group-hover:scale-105 shadow-sm overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaK-hZQFFfSo-uGBiv8CLFIOxifUVMCK2QRaXoHtkmHAqEgtygKgXF5d214Cq4VAFTSF8oyTRNI8hhMuEMmIJjbLa73Os8WV2sG4JmWx8yAuyNZyRtKfGrwNsfop1F5xBLD4FHXHvG71H7997iKVTyXbloyGkkO8qhq8LzuzFQyxVlumWyXJ85VaMkhP40s6OOUKpLjhQKAbqqZXe3c9BEZKMrxmZGjj__QVYiP1ptqWuXBnCN1nZ1zhU8-NgOtEeeHpID7PXB9g1w3w" 
+                  alt="دختر جوان" 
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <!-- Checkmark badge -->
+              <div class="absolute -bottom-0.5 -left-0.5 w-[20px] h-[20px] rounded-full bg-[#107C10] text-white flex items-center justify-center border-2 border-white shadow-xs">
+                <svg class="w-3 h-3 stroke-white stroke-[2.5]" fill="none" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 2. Older Man with grey beard -->
+            <div class="relative flex-shrink-0 cursor-pointer group">
+              <div class="w-[56px] h-[56px] rounded-full p-[2px] border border-[#D3E4D3] bg-white hover:border-[#107C10] transition transform group-hover:scale-105 overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNr7KWBRpxus-w6NIPeG5-SA0o93ssd7--9117wfpvN5qzuqDHRp1Ry57JozUFnqYGCcsgG9yixhu0gdYysNn0Elq3_PGCNU9oeFgNqoD_ytmMVRLMgEVmbCUS3NmberGv6hAGlwKUTzBeSlGBJNmMBeNZlCkLYx5uyLhOkyuCV7elMhOXa_z7uNanD2TfDkBA_-6_dfmTIM2rbgjxb4nXwgxlvHIomwzJdx33WPDqIQi2EfxQRbW79Gq_XZHPvCV4_BDiIoFmCjclpg" 
+                  alt="مرد مسن با ریش جوگندمی" 
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- 3. Older woman with headscarf / family portrait clip -->
+            <div class="relative flex-shrink-0 cursor-pointer group">
+              <div class="w-[56px] h-[56px] rounded-full p-[2px] border border-[#D3E4D3] bg-white hover:border-[#107C10] transition transform group-hover:scale-105 overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida/ALJJyrC9U4KqZ1dsi_u2kBqqM83mz255u69zicSSHkUaCOmwcp5oysI5vlihF4hyVKpz7LePDVAa1cWukVD22lcDhUJ0LcTSZtQ7Jc4dsLyXC13BNQsEHhirtFAK1VtvOlJAci9TSEl-ISG3C9gavADBBltqcGV951H05jtwDfZkW6SUnZj3iAtf6ZcDPG5PBOQoifZKrkvBfqyvqqBonz9g-qn1aMdxmcfnQk3616xd6xl1ITv8GNonTMDThdpK" 
+                  alt="مادربزرگ مهربان" 
+                  class="w-full h-full rounded-full object-cover object-top"
+                />
+              </div>
+            </div>
+
+            <!-- 4. Boy (friendly portrait) -->
+            <div class="relative flex-shrink-0 cursor-pointer group">
+              <div class="w-[56px] h-[56px] rounded-full p-[2px] border border-[#D3E4D3] bg-white hover:border-[#107C10] transition transform group-hover:scale-105 overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida/ALJJyrC9U4KqZ1dsi_u2kBqqM83mz255u69zicSSHkUaCOmwcp5oysI5vlihF4hyVKpz7LePDVAa1cWukVD22lcDhUJ0LcTSZtQ7Jc4dsLyXC13BNQsEHhirtFAK1VtvOlJAci9TSEl-ISG3C9gavADBBltqcGV951H05jtwDfZkW6SUnZj3iAtf6ZcDPG5PBOQoifZKrkvBfqyvqqBonz9g-qn1aMdxmcfnQk3616xd6xl1ITv8GNonTMDThdpK" 
+                  alt="پسربچه" 
+                  class="w-full h-full rounded-full object-cover object-right"
+                />
+              </div>
+            </div>
+
+            <!-- 5. Young man (realistic portrait) -->
+            <div class="relative flex-shrink-0 cursor-pointer group">
+              <div class="w-[56px] h-[56px] rounded-full p-[2px] border border-[#D3E4D3] bg-white hover:border-[#107C10] transition transform group-hover:scale-105 overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNr7KWBRpxus-w6NIPeG5-SA0o93ssd7--9117wfpvN5qzuqDHRp1Ry57JozUFnqYGCcsgG9yixhu0gdYysNn0Elq3_PGCNU9oeFgNqoD_ytmMVRLMgEVmbCUS3NmberGv6hAGlwKUTzBeSlGBJNmMBeNZlCkLYx5uyLhOkyuCV7elMhOXa_z7uNanD2TfDkBA_-6_dfmTIM2rbgjxb4nXwgxlvHIomwzJdx33WPDqIQi2EfxQRbW79Gq_XZHPvCV4_BDiIoFmCjclpg" 
+                  alt="پسر جوان" 
+                  class="w-full h-full rounded-full object-cover grayscale-[30%]"
+                />
+              </div>
+            </div>
+
+            <!-- 6. Girl (friendly portrait) -->
+            <div class="relative flex-shrink-0 cursor-pointer group">
+              <div class="w-[56px] h-[56px] rounded-full p-[2px] border border-[#D3E4D3] bg-white hover:border-[#107C10] transition transform group-hover:scale-105 overflow-hidden">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaK-hZQFFfSo-uGBiv8CLFIOxifUVMCK2QRaXoHtkmHAqEgtygKgXF5d214Cq4VAFTSF8oyTRNI8hhMuEMmIJjbLa73Os8WV2sG4JmWx8yAuyNZyRtKfGrwNsfop1F5xBLD4FHXHvG71H7997iKVTyXbloyGkkO8qhq8LzuzFQyxVlumWyXJ85VaMkhP40s6OOUKpLjhQKAbqqZXe3c9BEZKMrxmZGjj__QVYiP1ptqWuXBnCN1nZ1zhU8-NgOtEeeHpID7PXB9g1w3w" 
+                  alt="دختربچه" 
+                  class="w-full h-full rounded-full object-cover sepia-[15%]"
+                />
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Form Inputs Section -->
+        <form class="space-y-4 text-right" onsubmit="event.preventDefault();">
+          
+          <!-- 1. Input: نام (Name) -->
+          <div>
+            <label class="block text-[14px] font-semibold text-[#0C1F0C] mb-1.5 pr-0.5">
+              نام و نام خانوادگی
+            </label>
+            <div class="relative">
+              <input 
+                type="text" 
+                value="سارا احمدی" 
+                class="w-full h-[52px] px-4 rounded-[12px] bg-white border border-[#6DA06D] text-[#0C1F0C] text-[16px] font-medium text-right focus:outline-none focus:ring-2 focus:ring-[#0F770F] focus:border-transparent transition shadow-[0_1px_2px_rgba(12,31,12,0.04)]"
+              />
+              <div class="absolute left-4 top-1/2 -translate-y-1/2 text-[#455745]">
+                <svg class="w-5 h-5 stroke-[#6DA06D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Input: شماره موبایل (Phone Number) -->
+          <div>
+            <label class="block text-[14px] font-semibold text-[#0C1F0C] mb-1.5 pr-0.5">
+              شماره موبایل
+            </label>
+            <div class="relative">
+              <input 
+                type="text" 
+                value="۰۹۱۲ ۳۴۵ ۶۷۸۹" 
+                class="w-full h-[52px] px-4 rounded-[12px] bg-white border border-[#6DA06D] text-[#0C1F0C] text-[16px] font-medium text-right focus:outline-none focus:ring-2 focus:ring-[#0F770F] focus:border-transparent transition shadow-[0_1px_2px_rgba(12,31,12,0.04)]"
+              />
+              <div class="absolute left-4 top-1/2 -translate-y-1/2 text-[#455745]">
+                <svg class="w-5 h-5 stroke-[#6DA06D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Input: کد معرف (اختیاری) (Referral Code) -->
+          <div>
+            <label class="block text-[14px] font-semibold text-[#0C1F0C] mb-1.5 pr-0.5">
+              کد معرف <span class="text-[13px] font-normal text-[#5C705C]">(اختیاری)</span>
+            </label>
+            <div class="relative">
+              <input 
+                type="text" 
+                value="TZB-4821" 
+                class="w-full h-[52px] px-4 rounded-[12px] bg-white border border-[#6DA06D] text-[#0C1F0C] text-[16px] font-medium text-right focus:outline-none focus:ring-2 focus:ring-[#0F770F] focus:border-transparent transition shadow-[0_1px_2px_rgba(12,31,12,0.04)]"
+              />
+              <div class="absolute left-4 top-1/2 -translate-y-1/2 text-[#455745]">
+                <svg class="w-5 h-5 stroke-[#6DA06D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Helper: Valid referral code with check icon in #0E7C3A -->
+            <div class="mt-2 flex items-center justify-between px-1 text-[#0E7C3A]">
+              <div class="flex items-center gap-1.5">
+                <span class="w-4 h-4 rounded-full bg-[#E3F4E9] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-3 h-3 stroke-[#0E7C3A] stroke-[2.5]" fill="none" viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="text-[13px] font-semibold">
+                  کد معرف معتبر است
+                </span>
+              </div>
+              <span class="text-[12px] text-[#455745] font-normal">
+                (۵۰ سکه هدیه ورود)
+              </span>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Bottom Action Area (CTA + Footnote + iOS Home Indicator) -->
+      <div class="mt-6 pt-2">
+        <!-- Full-width primary pill button -->
+        <button class="w-full h-[56px] rounded-full bg-[#0F770F] hover:bg-[#0E6D0E] active:scale-[0.99] text-white text-[15px] font-bold flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(15,119,15,0.25)] transition duration-150">
+          <span>ثبت‌نام و ورود</span>
+          <svg class="w-5 h-5 stroke-white transform rotate-180" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <!-- Small Footnote -->
+        <p class="text-center text-[13px] text-[#5C705C] font-normal mt-3 leading-relaxed">
+          با ادامه، <span class="text-[#0F770F] font-medium underline underline-offset-2 cursor-pointer">قوانین مسابقه تیزبین</span> را می‌پذیرم
+        </p>
+
+        <!-- Home Indicator spacing simulation -->
+        <div class="w-32 h-1 bg-[#0C1F0C]/20 rounded-full mx-auto mt-4 mb-1"></div>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

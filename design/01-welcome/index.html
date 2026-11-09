@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>خوش‌آمدگویی تیزبین</title>
+  <!-- Vazirmatn Persian Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            vazir: ['Vazirmatn', 'sans-serif'],
+          },
+          colors: {
+            tizbin: {
+              bg: '#F4FCF4',
+              surface: '#FFFFFF',
+              surfaceAlt: '#E8F5E8',
+              accent: '#107C10',
+              accentFill: '#0F770F',
+              accentPressed: '#0E6D0E',
+              accentTint: '#DDF0DD',
+              support: '#CDB4FF',
+              supportStrong: '#A978FF',
+              textPrimary: '#0C1F0C',
+              textSecondary: '#455745',
+              textTertiary: '#5C705C',
+              divider: '#D3E4D3',
+              border: '#6DA06D',
+            }
+          },
+          boxShadow: {
+            'soft-card': '0 1px 2px rgba(12,31,12,0.04), 0 8px 24px rgba(12,31,12,0.06)',
+            'floating-btn': '0 4px 16px rgba(15, 119, 15, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #E2ECE2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mobile-frame {
+      width: 393px;
+      height: 852px;
+      max-width: 100vw;
+      max-height: 100vh;
+      position: relative;
+      background-color: #F4FCF4;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+    @media (max-width: 420px) {
+      .mobile-frame {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased select-none">
+
+  <!-- Mobile Viewport Container (393x852) -->
+  <div class="mobile-frame sm:rounded-[44px] flex flex-col justify-between">
+    
+    <!-- Top 55% Photo Header Area -->
+    <div class="relative w-full h-[52%] max-h-[445px] shrink-0 overflow-hidden rounded-b-[32px] shadow-sm">
+      <!-- Real Photo Asset -->
+      <img 
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGwU8vC7D9RgePYc_phWxyMB5EdstijarUoRUvrEFtE1AzutzSK6tg7zEG7tk-TsMDIrzVis7VfI-0Rq4RzvWshXH1mq4iB7jhNhX3jAJZCDKV3DLezTUco0TaXoVfLDKhBkgIuaBUsuBKrUGAk0aZi0LaPIJ2lw0x6TI3Kt2I-IILMCWXG8l2CPGKLeaD2m629kzgNNo7vRej0fnf7Xx80etgcWaN-YIi2m0LP1gaI3qVZ6RJgP8UosZY0CUGr24Dh2XwbNon6aoTQA" 
+        alt="مادربزرگ و نوه در حال بازی با گوشی هوشمند روی مبل" 
+        class="w-full h-full object-cover object-center"
+      />
+
+      <!-- Subtle gradient vignette overlay at the bottom for smooth transition -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/35 pointer-events-none"></div>
+
+      <!-- Top Status Bar Area (Safe area top padding ~59px) -->
+      <div class="absolute top-0 inset-x-0 pt-3 px-7 flex justify-between items-center text-white/95 text-xs font-semibold tracking-wider z-10 pointer-events-none">
+        <span>۹:۴۱</span>
+        <div class="flex items-center gap-1.5 opacity-90">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4z"/></svg>
+          <div class="w-5 h-2.5 border border-white/90 rounded-sm p-0.5 flex items-center">
+            <div class="w-full h-full bg-white rounded-2xs"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand badge on photo corner -->
+      <div class="absolute bottom-4 right-5 z-10">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-sm border border-white/60">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#107C10] animate-pulse"></div>
+          <span class="text-xs font-bold text-[#0C1F0C]">سرگرمی سالم خانوادگی</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Content Card Area (Taking ~48% height) -->
+    <div class="flex-1 px-6 pt-5 pb-8 flex flex-col justify-between text-right bg-[#F4FCF4]">
+      
+      <!-- Typography & Information Section -->
+      <div class="flex flex-col items-start w-full">
+        <!-- Small App Name in Accent Green -->
+        <div class="flex items-center gap-1.5 mb-1.5">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded-md bg-[#DDF0DD] text-[#0F770F]">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </span>
+          <span class="text-sm font-bold text-[#107C10] tracking-wide">بازی فکری تیزبین</span>
+        </div>
+
+        <!-- Main Headline: Display 32px / 800 -->
+        <h1 class="text-[30px] leading-[1.3] font-extrabold text-[#0C1F0C] mb-2 tracking-tight">
+          هر روز ۹۰ ثانیه، ۱۵ چالش
+        </h1>
+
+        <!-- Subline: 16px Body -->
+        <p class="text-[16px] leading-relaxed text-[#455745] font-normal mb-4">
+          ببین، بشمار، پیدا کن و جایزه ببر
+        </p>
+
+        <!-- Chips Row (3 small friendly pills) -->
+        <div class="flex flex-wrap items-center gap-2 mb-2 w-full">
+          <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-[#DDF0DD] text-[#0F770F] text-[13px] font-semibold">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+            </svg>
+            رایگان
+          </span>
+
+          <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-[#DDF0DD] text-[#0F770F] text-[13px] font-semibold">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            ساده
+          </span>
+
+          <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-[#DDF0DD] text-[#0F770F] text-[13px] font-semibold">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            برای همه سنین
+          </span>
+        </div>
+      </div>
+
+      <!-- Action Buttons Section -->
+      <div class="w-full flex flex-col items-center gap-3 pt-2">
+        <!-- Primary Pill Button (56px tall, #0F770F fill, white 14/600 label) -->
+        <button 
+          type="button" 
+          class="w-full h-14 bg-[#0F770F] hover:bg-[#0E6D0E] active:bg-[#0E6D0E] text-white text-[15px] font-semibold rounded-full flex items-center justify-center gap-2 shadow-floating-btn transition-colors cursor-pointer"
+        >
+          <span>شروع کنیم</span>
+          <svg class="w-5 h-5 -rotate-180 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </button>
+
+        <!-- Secondary Text Button -->
+        <button 
+          type="button" 
+          class="h-10 px-4 text-[#0F770F] hover:text-[#0E6D0E] text-[14px] font-semibold flex items-center justify-center transition-colors cursor-pointer"
+        >
+          قبلا ثبت‌نام کرده‌ام
+        </button>
+
+        <!-- Bottom Home Indicator clearance spacer (~16px) -->
+        <div class="w-32 h-1 bg-[#D3E4D3] rounded-full mt-1"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

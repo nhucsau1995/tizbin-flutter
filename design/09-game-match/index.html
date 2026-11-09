@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تیزبین - بازی حافظه جفت‌ها</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#d2bbff",
+            "on-error": "#ffffff",
+            "inverse-surface": "#2f3131",
+            "surface-alt": "#E8F5E8",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "support-strong": "#A978FF",
+            "success-text": "#0E7C3A",
+            "text-primary": "#0C1F0C",
+            "secondary": "#006e06",
+            "primary-fixed": "#97fa84",
+            "text-secondary": "#455745",
+            "surface-tint": "#006e06",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary-fixed": "#eaddff",
+            "sky-blue": "#3B9EFF",
+            "accent-pressed": "#0E6D0E",
+            "on-primary-fixed": "#002201",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#ecdfff",
+            "primary-fixed-dim": "#7bdc6b",
+            "on-secondary-fixed-variant": "#005303",
+            "apple-red": "#E5484D",
+            "background": "#F4FCF4",
+            "secondary-fixed-dim": "#79dd68",
+            "accent-fill": "#0F770F",
+            "on-tertiary-fixed-variant": "#503b7c",
+            "surface-variant": "#e2e2e2",
+            "inverse-on-surface": "#f0f1f1",
+            "secondary-container": "#91f77e",
+            "on-surface": "#1a1c1c",
+            "danger-text": "#CE2020",
+            "surface-dim": "#dadada",
+            "outline": "#6f7a6a",
+            "success-bg": "#E3F4E9",
+            "secondary-fixed": "#94fa81",
+            "on-background": "#1a1c1c",
+            "surface-container-low": "#f3f3f4",
+            "surface-container": "#eeeeee",
+            "control-border": "#6DA06D",
+            "warning-text": "#A75906",
+            "surface-container-high": "#e8e8e8",
+            "on-primary-container": "#99fc86",
+            "inverse-primary": "#7bdc6b",
+            "divider": "#D3E4D3",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#005303",
+            "on-secondary-container": "#007306",
+            "on-tertiary-fixed": "#230a4e",
+            "primary-container": "#0f770f",
+            "danger-bg": "#FBE5E5",
+            "banana-yellow": "#F5C518",
+            "warning-bg": "#FAEFE1",
+            "on-secondary-fixed": "#002200",
+            "surface-bright": "#f9f9f9",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#bfcab7",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#3f4a3b",
+            "surface": "#f9f9f9",
+            "primary": "#005c04",
+            "tertiary-container": "#705a9e",
+            "orange": "#FF8A3D",
+            "text-tertiary": "#5C705C",
+            "accent-tint": "#DDF0DD",
+            "tertiary": "#574284"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "1.25rem",
+            "space-md": "0.75rem",
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "title": ["Vazirmatn"],
+            "caption": ["Vazirmatn"],
+            "display": ["Vazirmatn"],
+            "label": ["Vazirmatn"],
+            "body": ["Vazirmatn"]
+          },
+          "fontSize": {
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "fontWeight": "800" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .card-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 12, 0.04), 0 8px 24px rgba(12, 31, 12, 0.06);
+    }
+    .active-card-shadow {
+      box-shadow: 0 4px 14px rgba(15, 119, 15, 0.2);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-primary min-h-screen flex items-center justify-center p-0 sm:p-4">
+<!-- Mobile Frame (393px width fixed viewport) -->
+<main class="w-full max-w-[393px] h-[852px] bg-background relative flex flex-col justify-between overflow-hidden shadow-2xl sm:rounded-[44px] border-surface-alt sm:border-[8px]">
+<!-- Top System & Status Area -->
+<header class="w-full pt-3 px-5 flex flex-col z-10 shrink-0">
+<!-- Top Mobile Status Bar Simulation -->
+<div class="flex items-center justify-between text-text-secondary text-caption font-caption h-7 px-1 mb-2">
+<span class="font-bold tracking-tight">۰۹:۴۱</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- In-Game Header Cluster -->
+<div class="flex items-center justify-between relative mt-1">
+<!-- Right Action Cluster: Exit Button & Step Indicator -->
+<div class="flex items-center gap-2">
+<button aria-label="خروج" class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-text-secondary border border-divider hover:bg-accent-tint active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-full border border-divider flex items-center">
+<span class="text-caption font-caption font-bold text-text-primary">۱۳ از ۱۵</span>
+</div>
+</div>
+<!-- Center: Circular Countdown Timer -->
+<div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center">
+<div class="relative w-[60px] h-[60px] flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 60 60">
+<!-- Background Ring Track -->
+<circle cx="30" cy="30" fill="none" r="25" stroke="#E8F5E8" stroke-width="4.5"></circle>
+<!-- Animated Progress Indicator Ring (16s of ~30s remaining) -->
+<circle cx="30" cy="30" fill="none" r="25" stroke="#0F770F" stroke-dasharray="157" stroke-dashoffset="68" stroke-linecap="round" stroke-width="4.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-title font-title font-bold text-text-primary leading-tight mt-0.5">۱۶</span>
+<span class="text-[10px] font-caption text-text-secondary -mt-1">ثانیه</span>
+</div>
+</div>
+</div>
+<!-- Left: Current Score Chip -->
+<div class="flex items-center bg-accent-tint text-accent-fill px-3 py-1.5 rounded-full border border-divider">
+<span class="text-label font-label font-bold flex items-center gap-1">
+<span class="text-banana-yellow drop-shadow-sm">⭐</span>
+<span>۱٬۲۵۰</span>
+</span>
+</div>
+</div>
+<!-- 15-Segment Level Progress Bar -->
+<div class="w-full grid grid-cols-15 gap-1 mt-4 px-0.5" style="grid-template-columns: repeat(15, minmax(0, 1fr));">
+<!-- 12 Completed Segments -->
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<!-- 3 Pending Segments -->
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+</div>
+</header>
+<!-- Center Play Area -->
+<div class="flex-1 flex flex-col justify-center px-5 pt-1 pb-2">
+<!-- Challenge Instructions Banner -->
+<div class="text-center mb-3">
+<h1 class="text-title font-title text-text-primary">جفت‌های یکسان را پیدا کن</h1>
+<p class="text-label font-label text-text-secondary mt-0.5">۲ از ۴ جفت پیدا شد</p>
+</div>
+<!-- Focal Element: 3 Columns x 4 Rows Game Grid (12 Cards) -->
+<div class="grid grid-cols-3 gap-3 justify-items-center w-full max-w-[340px] mx-auto">
+<!-- Card 1: MATCHED - Yellow Banana -->
+<div class="w-[98px] h-[98px] rounded-[14px] bg-success-bg border border-[#A3D9B1] relative flex items-center justify-center card-shadow transition-transform duration-200">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-success-text text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Flat 2D Banana Vector -->
+<svg class="w-12 h-12" fill="none" viewbox="0 0 48 48">
+<path d="M12 36C18 38 28 36 34 26C38 19 38 12 36 8C35.5 13 32 20 26 25C20 30 14 32 12 36Z" fill="#F5C518" stroke="#DCA506" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M36 8L38 6" stroke="#455745" stroke-linecap="round" stroke-width="2"></path>
+<path d="M16 34C22 34 29 29 33 22" opacity="0.6" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- Card 2: FACE DOWN (Lavender Back) -->
+<button aria-label="کارت پنهان" class="w-[98px] h-[98px] rounded-[14px] bg-[#CDB4FF] card-shadow flex items-center justify-center active:scale-95 transition-transform duration-150 relative" type="button">
+<div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-white/10">
+<span class="material-symbols-outlined text-white text-[28px]">visibility</span>
+</div>
+</button>
+<!-- Card 3: MATCHED - Sky Blue Car -->
+<div class="w-[98px] h-[98px] rounded-[14px] bg-success-bg border border-[#A3D9B1] relative flex items-center justify-center card-shadow transition-transform duration-200">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-success-text text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Flat 2D Car Vector -->
+<svg class="w-12 h-12" fill="none" viewbox="0 0 48 48">
+<rect fill="#3B9EFF" height="12" rx="4" width="32" x="8" y="22"></rect>
+<path d="M14 22L18 14H30L34 22H14Z" fill="#3B9EFF" opacity="0.9"></path>
+<path d="M17 21L19 16H29L31 21H17Z" fill="#FFFFFF" opacity="0.75"></path>
+<circle cx="15" cy="34" fill="#0C1F0C" r="4"></circle>
+<circle cx="15" cy="34" fill="#FFFFFF" r="1.5"></circle>
+<circle cx="33" cy="34" fill="#0C1F0C" r="4"></circle>
+<circle cx="33" cy="34" fill="#FFFFFF" r="1.5"></circle>
+</svg>
+</div>
+<!-- Card 4: FACE DOWN (Lavender Back) -->
+<button aria-label="کارت پنهان" class="w-[98px] h-[98px] rounded-[14px] bg-[#CDB4FF] card-shadow flex items-center justify-center active:scale-95 transition-transform duration-150 relative" type="button">
+<div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-white/10">
+<span class="material-symbols-outlined text-white text-[28px]">visibility</span>
+</div>
+</button>
+<!-- Card 5: ACTIVE MATCHING (1 of 2) - Orange Bird -->
+<div class="w-[98px] h-[98px] rounded-[14px] bg-surface-container-lowest border-2 border-accent-fill active-card-shadow scale-105 relative flex items-center justify-center transition-all duration-200">
+<!-- Flat 2D Bird Vector -->
+<svg class="w-12 h-12" fill="none" viewbox="0 0 48 48">
+<ellipse cx="23" cy="27" fill="#FF8A3D" rx="13" ry="10"></ellipse>
+<circle cx="30" cy="18" fill="#FF8A3D" r="8"></circle>
+<circle cx="33" cy="17" fill="#0C1F0C" r="2"></circle>
+<circle cx="33.5" cy="16.5" fill="#FFFFFF" r="0.8"></circle>
+<path d="M38 18L44 20L38 22V18Z" fill="#F5C518"></path>
+<path d="M14 26C12 28 8 28 8 25C8 22 14 24 14 26Z" fill="#FF8A3D"></path>
+<path d="M22 28C24 30 20 33 16 32" opacity="0.6" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- Card 6: FACE DOWN (Lavender Back) -->
+<button aria-label="کارت پنهان" class="w-[98px] h-[98px] rounded-[14px] bg-[#CDB4FF] card-shadow flex items-center justify-center active:scale-95 transition-transform duration-150 relative" type="button">
+<div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-white/10">
+<span class="material-symbols-outlined text-white text-[28px]">visibility</span>
+</div>
+</button>
+<!-- Card 7: MATCHED - Sky Blue Car (Pair 2) -->
+<div class="w-[98px] h-[98px] rounded-[14px] bg-success-bg border border-[#A3D9B1] relative flex items-center justify-center card-shadow transition-transform duration-200">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-success-text text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Flat 2D Car Vector -->
+<svg class="w-12 h-12" fill="none" viewbox="0 0 48 48">
+<rect fill="#3B9EFF" height="12" rx="4" width="32" x="8" y="22"></rect>
+<path d="M14 22L18 14H30L34 22H14Z" fill="#3B9EFF" opacity="0.9"></path>
+<path d="M17 21L19 16H29L31 21H17Z" fill="#FFFFFF" opacity="0.75"></path>
+<circle cx="15" cy="34" fill="#0C1F0C" r="4"></circle>
+<circle cx="15" cy="34" fill="#FFFFFF" r="1.5"></circle>
+<circle cx="33" cy="34" fill="#0C1F0C" r="4"></circle>
+<circle cx="33" cy="34" fill="#FFFFFF" r="1.5"></circle>
+</svg>
+</div>
+<!-- Card 8: ACTIVE MATCHING (2 of 2) - Orange Bird -->
+<div class="w-[98px] h-[98px] rounded-[14px] bg-surface-container-lowest border-2 border-accent-fill active-card-shadow scale-105 relative flex items-center justify-center transition-all duration-200">
+<!-- Flat 2D Bird Vector -->
+<svg class="w-12 h-12" fill="none" viewbox="0 0 48 48">
+<ellipse cx="23" cy="27" fill="#FF8A3D" rx="13" ry="10"></ellipse>
+<circle cx="30" cy="18" fill="#FF8A3D" r="8"></circle>
+<circle cx="33" cy="17" fill="#0C1F0C" r="2"></circle>
+<circle cx="33.5" cy="16.5" fill="#FFFFFF" r="0.8"></circle>
+<path d="M38 18L44 20L38 22V18Z" fill="#F5C518"></path>
+<path d="M14 26C12 28 8 28 8 25C8 22 14 24 14 26Z" fill="#FF8A3D"></path>
+<path d="M22 28C24 30 20 33 16 32" opacity="0.6" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- Card 9: FACE DOWN (Lavender Back) -->
+<button aria-label="کارت پنهان" class="w-[98px] h-[98px] rounded-[14px] bg-[#CDB4FF] card-shadow flex items-center justify-center active:scale-95 transition-transform duration-150 relative" type="button">
+<div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-white/10">
+<span class="material-symbols-outlined text-white text-[28px]">visibility</span>
+</div>
+</button>
+<!-- Card 10: MATCHED - Yellow Banana (Pair 2) -->
+<div class="w-[98px] h-[98px] rounded-[14px] bg-success-bg border border-[#A3D9B1] relative flex items-center justify-center card-shadow transition-transform duration-200">
+<div class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-success-text text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Flat 2D Banana Vector -->
+<svg class="w-12 h-12" fill="none" viewbox="0 0 48 48">
+<path d="M12 36C18 38 28 36 34 26C38 19 38 12 36 8C35.5 13 32 20 26 25C20 30 14 32 12 36Z" fill="#F5C518" stroke="#DCA506" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M36 8L38 6" stroke="#455745" stroke-linecap="round" stroke-width="2"></path>
+<path d="M16 34C22 34 29 29 33 22" opacity="0.6" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- Card 11: FACE DOWN (Lavender Back) -->
+<button aria-label="کارت پنهان" class="w-[98px] h-[98px] rounded-[14px] bg-[#CDB4FF] card-shadow flex items-center justify-center active:scale-95 transition-transform duration-150 relative" type="button">
+<div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-white/10">
+<span class="material-symbols-outlined text-white text-[28px]">visibility</span>
+</div>
+</button>
+<!-- Card 12: FACE DOWN (Lavender Back) -->
+<button aria-label="کارت پنهان" class="w-[98px] h-[98px] rounded-[14px] bg-[#CDB4FF] card-shadow flex items-center justify-center active:scale-95 transition-transform duration-150 relative" type="button">
+<div class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-white/10">
+<span class="material-symbols-outlined text-white text-[28px]">visibility</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Bottom Gameplay Assistance & Action Bar -->
+<footer class="w-full px-5 pb-8 pt-2 flex flex-col gap-3 shrink-0">
+<!-- Powerup Indicator Chip -->
+<div class="flex justify-center">
+<div class="bg-accent-tint border border-divider text-accent-fill px-4 py-1.5 rounded-full flex items-center gap-1.5">
+<span class="text-[14px]">⚡</span>
+<span class="text-caption font-caption font-bold">ضریب سرعت فعال است (امتیاز ۲ برابر)</span>
+</div>
+</div>
+<!-- Action Buttons Row -->
+<div class="flex items-center gap-3">
+<!-- Hint Secondary Button -->
+<button class="flex-1 h-14 bg-surface-container-lowest border-[1.5px] border-control-border text-primary font-label text-label rounded-full flex items-center justify-center gap-2 active:scale-95 transition-transform duration-150 card-shadow" type="button">
+<span class="material-symbols-outlined text-primary text-[22px]">lightbulb</span>
+<span>راهنما (۱)</span>
+</button>
+<!-- Shuffle Powerup Button -->
+<button aria-label="جابجایی کارت‌ها" class="w-14 h-14 rounded-full bg-surface-container-lowest border-[1.5px] border-control-border text-primary flex items-center justify-center active:scale-95 transition-transform duration-150 card-shadow" type="button">
+<span class="material-symbols-outlined text-[24px]">shuffle</span>
+</button>
+</div>
+<!-- Home Indicator Bar (iOS indicator) -->
+<div class="w-32 h-1 bg-text-primary/20 rounded-full mx-auto mt-1"></div>
+</footer>
+</main>
+</body></html>

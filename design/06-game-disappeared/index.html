@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>تیزبین - کدام تصویر ناپدید شد؟</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Vazirmatn Persian Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed-variant": "#005303",
+            "tertiary-fixed": "#eaddff",
+            "surface-container-low": "#f3f3f4",
+            "text-secondary": "#455745",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#d2bbff",
+            "surface-tint": "#006e06",
+            "secondary-container": "#91f77e",
+            "warning-text": "#A75906",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#1a1c1c",
+            "on-primary-fixed-variant": "#005303",
+            "outline": "#6f7a6a",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#e2e2e2",
+            "background": "#F4FCF4",
+            "tertiary-container": "#705a9e",
+            "surface-dim": "#dadada",
+            "on-tertiary-fixed": "#230a4e",
+            "on-secondary": "#ffffff",
+            "success-text": "#0E7C3A",
+            "surface-container": "#eeeeee",
+            "text-tertiary": "#5C705C",
+            "accent-pressed": "#0E6D0E",
+            "accent-tint": "#DDF0DD",
+            "surface-alt": "#E8F5E8",
+            "tertiary": "#574284",
+            "secondary": "#006e06",
+            "secondary-fixed-dim": "#79dd68",
+            "banana-yellow": "#F5C518",
+            "secondary-fixed": "#94fa81",
+            "on-secondary-fixed": "#002200",
+            "control-border": "#6DA06D",
+            "divider": "#D3E4D3",
+            "primary": "#005c04",
+            "sky-blue": "#3B9EFF",
+            "on-error-container": "#93000a",
+            "text-primary": "#0C1F0C",
+            "danger-text": "#CE2020",
+            "error-container": "#ffdad6",
+            "outline-variant": "#bfcab7",
+            "primary-fixed": "#97fa84",
+            "inverse-primary": "#7bdc6b",
+            "surface-container-high": "#e8e8e8",
+            "on-secondary-container": "#007306",
+            "accent-fill": "#0F770F",
+            "primary-fixed-dim": "#7bdc6b",
+            "success-bg": "#E3F4E9",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#3f4a3b",
+            "on-background": "#1a1c1c",
+            "surface-bright": "#f9f9f9",
+            "inverse-on-surface": "#f0f1f1",
+            "danger-bg": "#FBE5E5",
+            "orange": "#FF8A3D",
+            "on-primary-container": "#99fc86",
+            "inverse-surface": "#2f3131",
+            "support-strong": "#A978FF",
+            "surface-container-highest": "#e2e2e2",
+            "on-tertiary-container": "#ecdfff",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#503b7c",
+            "apple-red": "#E5484D",
+            "on-primary-fixed": "#002201",
+            "primary-container": "#0f770f",
+            "warning-bg": "#FAEFE1",
+            "surface": "#f9f9f9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "space-xl": "1.5rem",
+            "space-lg": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "1.25rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "title": ["Vazirmatn", "sans-serif"],
+            "caption": ["Vazirmatn", "sans-serif"],
+            "display": ["Vazirmatn", "sans-serif"],
+            "body": ["Vazirmatn", "sans-serif"],
+            "label": ["Vazirmatn", "sans-serif"]
+          },
+          "fontSize": {
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "fontWeight": "800" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .custom-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 12, 0.04), 0 8px 24px rgba(12, 31, 12, 0.06);
+    }
+    .answer-card-shadow {
+      box-shadow: 0 2px 8px rgba(12, 31, 12, 0.05);
+    }
+    /* Circular timer SVG stroke math */
+    .timer-circle {
+      stroke-dasharray: 238;
+      stroke-dashoffset: 48;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      transition: stroke-dashoffset 1s linear;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-primary min-h-screen flex items-center justify-center p-0 sm:p-4">
+<!-- Mobile Simulator Frame (iPhone 393x852) -->
+<main class="w-full max-w-[393px] h-[852px] bg-background relative flex flex-col justify-between overflow-hidden shadow-2xl sm:rounded-[44px] border border-divider">
+<!-- Top System Safe Area Bar (Decorative Status Bar placeholder) -->
+<div class="w-full pt-3 px-7 flex justify-between items-center text-caption font-caption text-text-secondary">
+<span class="font-bold">۹:۴۱</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[19px]">battery_full</span>
+</div>
+</div>
+<!-- MAIN SCROLLABLE / FLOW CONTENT -->
+<div class="flex-1 flex flex-col px-5 pt-2 pb-4 justify-between">
+<!-- HEADER ZONE -->
+<section aria-label="مشخصات بازی" class="w-full flex flex-col gap-3">
+<!-- Header Controls Row -->
+<div class="flex items-center justify-between">
+<!-- Right (RTL Start): Stage counter & Exit link -->
+<div class="flex flex-col items-start gap-1">
+<div class="inline-flex items-center px-3 py-1 bg-accent-tint text-accent-fill rounded-full text-label font-label font-bold">
+<span>۴ از ۱۵</span>
+</div>
+<button class="text-caption font-caption text-text-tertiary hover:text-danger-text transition-colors flex items-center gap-0.5 active:scale-95 px-1 py-0.5" type="button">
+<span>انصراف</span>
+<span class="text-xs">✕</span>
+</button>
+</div>
+<!-- Center: Circular Countdown Timer -->
+<div class="relative flex items-center justify-center w-20 h-20">
+<svg class="w-20 h-20" viewbox="0 0 88 88">
+<!-- Background ring -->
+<circle cx="44" cy="44" fill="none" r="38" stroke="#E8F5E8" stroke-width="6"></circle>
+<!-- Countdown progress ring -->
+<circle class="timer-circle" cx="44" cy="44" fill="none" r="38" stroke="#0F770F" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center leading-none select-none">
+<span class="text-display font-display text-accent-fill tracking-tight font-extrabold mt-0.5">۶۹</span>
+<span class="text-caption font-caption text-text-tertiary -mt-1 text-[11px]">ثانیه</span>
+</div>
+</div>
+<!-- Left (RTL End): Star Score Chip -->
+<div class="flex flex-col items-end gap-1">
+<div class="inline-flex items-center gap-1 px-3 py-1 bg-accent-tint text-accent-fill rounded-full text-label font-label font-bold">
+<span class="text-banana-yellow">⭐</span>
+<span class="tracking-wide">۳۹۰</span>
+</div>
+<span class="text-caption font-caption text-text-tertiary px-1 text-[11px]">امتیاز فعلی</span>
+</div>
+</div>
+<!-- 15-Segment Progress Bar -->
+<div aria-label="پیشرفت مراحل: ۳ مرحله تکمیل شده از ۱۵ مرحله" class="w-full flex items-center gap-1 px-1 py-1">
+<!-- 3 Completed Segments -->
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<!-- 12 Incomplete Segments -->
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+</div>
+</section>
+<!-- FOCAL GAME BOARD & PROMPT -->
+<section class="flex flex-col items-center text-center my-auto">
+<!-- Title & Instruction -->
+<h1 class="text-title font-title text-text-primary tracking-tight mb-1">
+          کدام تصویر ناپدید شد؟
+        </h1>
+<p class="text-caption font-caption text-text-secondary max-w-[280px]">
+          تصاویر را به یاد بیاور و تصویر غایب را پیدا کن
+        </p>
+<!-- Primary Focal Card -->
+<div class="w-full bg-surface-container-lowest border border-divider rounded-2xl p-4 mt-4 custom-shadow">
+<!-- Memory Tiles Grid / Row (4 items) -->
+<div class="grid grid-cols-4 gap-2.5 items-center justify-items-center">
+<!-- Tile 1: Cat -->
+<div class="w-full aspect-square max-w-[70px] bg-background border border-divider rounded-xl flex items-center justify-center p-2.5">
+<svg class="w-full h-full text-orange" fill="currentColor" viewbox="0 0 64 64">
+<!-- 2D Clean Flat Orange Cat -->
+<polygon fill="#FF8A3D" points="14,14 26,26 14,32"></polygon>
+<polygon fill="#FF8A3D" points="50,14 38,26 50,32"></polygon>
+<circle cx="32" cy="34" fill="#FF8A3D" r="20"></circle>
+<ellipse cx="25" cy="32" fill="#0C1F0C" rx="3" ry="4"></ellipse>
+<ellipse cx="39" cy="32" fill="#0C1F0C" rx="3" ry="4"></ellipse>
+<polygon fill="#E5484D" points="32,38 29,42 35,42"></polygon>
+<path d="M22,41 Q27,43 32,41 Q37,43 42,41" fill="none" stroke="#0C1F0C" stroke-linecap="round" stroke-width="2"></path>
+<line stroke="#0C1F0C" stroke-linecap="round" stroke-width="2" x1="16" x2="6" y1="36" y2="34"></line>
+<line stroke="#0C1F0C" stroke-linecap="round" stroke-width="2" x1="16" x2="7" y1="41" y2="43"></line>
+<line stroke="#0C1F0C" stroke-linecap="round" stroke-width="2" x1="48" x2="58" y1="36" y2="34"></line>
+<line stroke="#0C1F0C" stroke-linecap="round" stroke-width="2" x1="48" x2="57" y1="41" y2="43"></line>
+</svg>
+</div>
+<!-- Tile 2: Fish -->
+<div class="w-full aspect-square max-w-[70px] bg-background border border-divider rounded-xl flex items-center justify-center p-2.5">
+<svg class="w-full h-full text-sky-blue" fill="currentColor" viewbox="0 0 64 64">
+<!-- 2D Clean Flat Blue Fish -->
+<ellipse cx="34" cy="32" fill="#3B9EFF" rx="19" ry="14"></ellipse>
+<polygon fill="#3B9EFF" points="12,18 24,32 12,46"></polygon>
+<polygon fill="#207AD4" points="34,18 42,22 36,25"></polygon>
+<circle cx="43" cy="28" fill="#0C1F0C" r="3"></circle>
+<circle cx="44" cy="27" fill="#FFFFFF" r="1"></circle>
+<path d="M49,34 C46,36 44,35 44,35" fill="none" stroke="#0C1F0C" stroke-linecap="round" stroke-width="2"></path>
+<ellipse cx="30" cy="34" fill="#207AD4" rx="3" ry="5"></ellipse>
+</svg>
+</div>
+<!-- Tile 3: Sun -->
+<div class="w-full aspect-square max-w-[70px] bg-background border border-divider rounded-xl flex items-center justify-center p-2">
+<svg class="w-full h-full text-banana-yellow" fill="currentColor" viewbox="0 0 64 64">
+<!-- 2D Clean Flat Yellow Sun -->
+<circle cx="32" cy="32" fill="#F5C518" r="14"></circle>
+<!-- 8 Rays -->
+<rect fill="#F5C518" height="6" rx="2" width="4" x="30" y="8"></rect>
+<rect fill="#F5C518" height="6" rx="2" width="4" x="30" y="50"></rect>
+<rect fill="#F5C518" height="4" rx="2" width="6" x="8" y="30"></rect>
+<rect fill="#F5C518" height="4" rx="2" width="6" x="50" y="30"></rect>
+<rect fill="#F5C518" height="4" rx="2" transform="rotate(45 17.5 17)" width="5" x="15" y="15"></rect>
+<rect fill="#F5C518" height="4" rx="2" transform="rotate(45 46.5 46)" width="5" x="44" y="44"></rect>
+<rect fill="#F5C518" height="4" rx="2" transform="rotate(-45 46.5 17)" width="5" x="44" y="15"></rect>
+<rect fill="#F5C518" height="4" rx="2" transform="rotate(-45 17.5 46)" width="5" x="15" y="44"></rect>
+<!-- Cheerful Face -->
+<circle cx="28" cy="30" fill="#0C1F0C" r="2"></circle>
+<circle cx="36" cy="30" fill="#0C1F0C" r="2"></circle>
+<path d="M28,35 Q32,38 36,35" fill="none" stroke="#0C1F0C" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Tile 4: MISSING TILE -->
+<div class="w-full aspect-square max-w-[70px] rounded-xl flex items-center justify-center bg-[#F6F0FF] border-2 border-dashed border-[#CDB4FF] shadow-inner animate-pulse">
+<span class="text-support-strong text-3xl font-extrabold select-none">؟</span>
+</div>
+</div>
+</div>
+<!-- Supportive Caption below card -->
+<p class="text-caption font-caption text-text-tertiary mt-2.5">
+          یکی از تصاویر قبلی را انتخاب کن
+        </p>
+</section>
+<!-- ANSWER SELECTION ZONE -->
+<section aria-label="گزینه‌های پاسخ" class="w-full flex flex-col gap-2.5">
+<!-- Selection Label -->
+<div class="flex items-center justify-between px-1">
+<span class="text-label font-label text-text-primary">گزینه‌ها:</span>
+<span class="text-caption font-caption text-text-tertiary">لمس کنید</span>
+</div>
+<!-- 3 Big Touch-Friendly Answer Buttons -->
+<div class="grid grid-cols-3 gap-3">
+<!-- Answer 1: Red Bird -->
+<button class="option-btn min-h-[110px] bg-surface-container-lowest border border-divider hover:border-control-border active:scale-95 transition-all duration-150 rounded-2xl flex flex-col items-center justify-center p-2.5 answer-card-shadow focus:outline-none focus:ring-2 focus:ring-accent-fill group" onclick="selectOption(this)" type="button">
+<div class="w-12 h-12 flex items-center justify-center mb-1.5 transition-transform group-hover:scale-105">
+<svg class="w-10 h-10" fill="currentColor" viewbox="0 0 64 64">
+<!-- Flat 2D Red Bird -->
+<path d="M12,40 C14,24 30,20 44,22 C48,22 52,24 54,26 L62,26 L54,32 C54,42 42,48 28,48 C20,48 14,44 12,40 Z" fill="#E5484D"></path>
+<polygon fill="#E5484D" points="12,40 4,32 16,30"></polygon>
+<!-- Wing -->
+<ellipse cx="28" cy="36" fill="#BF2E33" rx="9" ry="5"></ellipse>
+<!-- Eye & Beak -->
+<circle cx="46" cy="27" fill="#FFFFFF" r="2.5"></circle>
+<circle cx="47" cy="27" fill="#0C1F0C" r="1.5"></circle>
+<polygon fill="#F5C518" points="54,26 62,28 54,32"></polygon>
+<!-- Legs -->
+<line stroke="#0C1F0C" stroke-linecap="round" stroke-width="2" x1="28" x2="28" y1="48" y2="54"></line>
+<line stroke="#0C1F0C" stroke-linecap="round" stroke-width="2" x1="33" x2="33" y1="48" y2="54"></line>
+</svg>
+</div>
+<span class="text-caption font-caption font-bold text-text-primary group-hover:text-accent-fill transition-colors">پرنده</span>
+</button>
+<!-- Answer 2: Pink Flower -->
+<button class="option-btn min-h-[110px] bg-surface-container-lowest border border-divider hover:border-control-border active:scale-95 transition-all duration-150 rounded-2xl flex flex-col items-center justify-center p-2.5 answer-card-shadow focus:outline-none focus:ring-2 focus:ring-accent-fill group" onclick="selectOption(this)" type="button">
+<div class="w-12 h-12 flex items-center justify-center mb-1.5 transition-transform group-hover:scale-105">
+<svg class="w-10 h-10" fill="currentColor" viewbox="0 0 64 64">
+<!-- Flat 2D Pink Flower -->
+<!-- Petals -->
+<circle cx="32" cy="18" fill="#FF8EC7" r="8"></circle>
+<circle cx="44" cy="26" fill="#FF8EC7" r="8"></circle>
+<circle cx="44" cy="40" fill="#FF8EC7" r="8"></circle>
+<circle cx="32" cy="46" fill="#FF8EC7" r="8"></circle>
+<circle cx="20" cy="40" fill="#FF8EC7" r="8"></circle>
+<circle cx="20" cy="26" fill="#FF8EC7" r="8"></circle>
+<!-- Center Core -->
+<circle cx="32" cy="32" fill="#F5C518" r="8"></circle>
+</svg>
+</div>
+<span class="text-caption font-caption font-bold text-text-primary group-hover:text-accent-fill transition-colors">گل</span>
+</button>
+<!-- Answer 3: Blue Ball -->
+<button class="option-btn min-h-[110px] bg-surface-container-lowest border border-divider hover:border-control-border active:scale-95 transition-all duration-150 rounded-2xl flex flex-col items-center justify-center p-2.5 answer-card-shadow focus:outline-none focus:ring-2 focus:ring-accent-fill group" onclick="selectOption(this)" type="button">
+<div class="w-12 h-12 flex items-center justify-center mb-1.5 transition-transform group-hover:scale-105">
+<svg class="w-10 h-10" fill="currentColor" viewbox="0 0 64 64">
+<!-- Flat 2D Blue Play Ball with Band -->
+<circle cx="32" cy="32" fill="#3B9EFF" r="18"></circle>
+<path d="M16,32 A18,18 0 0,0 48,32" fill="none" stroke="#FFFFFF" stroke-width="5"></path>
+<circle cx="32" cy="32" fill="#F5C518" r="5"></circle>
+</svg>
+</div>
+<span class="text-caption font-caption font-bold text-text-primary group-hover:text-accent-fill transition-colors">توپ</span>
+</button>
+</div>
+</section>
+<!-- BOTTOM HELPER & BONUS BAR -->
+<footer class="w-full pt-2 flex items-center justify-between">
+<!-- Hint Button -->
+<button class="inline-flex items-center gap-1.5 px-4 py-2 bg-surface-container-lowest border border-control-border rounded-full text-caption font-caption font-bold text-text-primary hover:bg-accent-tint active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-banana-yellow text-[18px]" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span>راهنما (۲)</span>
+</button>
+<!-- Speed Bonus Badge -->
+<div class="inline-flex items-center gap-1 px-3 py-1.5 bg-surface-alt text-text-secondary rounded-full text-[12px] font-caption">
+<span class="material-symbols-outlined text-orange text-[16px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>ضریب سرعت فعال است</span>
+</div>
+</footer>
+</div>
+<!-- Safe Area Bottom Cushion (No nav bar present) -->
+<div class="w-full pb-3 flex justify-center items-center">
+<div class="w-32 h-1 bg-outline-variant/60 rounded-full"></div>
+</div>
+</main>
+<!-- Interactive Demo Feedback Script -->
+<script>
+    function selectOption(buttonElement) {
+      // Visual feedback on tap
+      const allButtons = document.querySelectorAll('.option-btn');
+      allButtons.forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-accent-fill', 'bg-accent-tint');
+      });
+      
+      buttonElement.classList.add('ring-2', 'ring-accent-fill', 'bg-accent-tint');
+      
+      // Gentle feedback trigger
+      if (window.navigator && window.navigator.vibrate) {
+        window.navigator.vibrate(30);
+      }
+    }
+  </script>
+</body></html>

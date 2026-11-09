@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جدول رتبه‌ها تیزبین</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            vazir: ['Vazirmatn', 'sans-serif'],
+          },
+          colors: {
+            bglight: '#F4FCF4',
+            accent: '#107C10',
+            accentFill: '#0F770F',
+            accentTint: '#DDF0DD',
+            supportLavender: '#CDB4FF',
+            supportStrong: '#A978FF',
+            inkPrimary: '#0C1F0C',
+            inkSecondary: '#455745',
+            inkTertiary: '#5C705C',
+            dividerLine: '#D3E4D3',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #F4FCF4;
+      color: #0C1F0C;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+    }
+    .custom-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 12, 0.04), 0 8px 24px rgba(12, 31, 12, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-[#F4FCF4] flex justify-center items-start min-h-screen">
+  <!-- Mobile Frame (393px) -->
+  <div class="w-[393px] min-h-[852px] bg-[#F4FCF4] flex flex-col relative pb-[94px] overflow-x-hidden">
+    
+    <!-- Top System / Status Bar Spacer (54px) -->
+    <div class="w-full h-12 flex items-center justify-between px-6 pt-2 select-none text-[13px] font-semibold text-[#0C1F0C]">
+      <span class="tracking-tight">۹:۴۱</span>
+      <div class="flex items-center gap-1.5">
+        <!-- Signal / Wifi / Battery SVGs -->
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z" opacity="0.3"/>
+          <path d="M12 6c-3.31 0-6 2.69-6 6 0 1.45.52 2.78 1.38 3.82L12 19.5l4.62-3.68C17.48 14.78 18 13.45 18 12c0-3.31-2.69-6-6-6z"/>
+        </svg>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+          <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+          <line x1="12" y1="20" x2="12.01" y2="20"/>
+        </svg>
+        <div class="w-5 h-2.5 border border-[#0C1F0C] rounded-[3px] p-[1px] flex items-center">
+          <div class="w-3 h-full bg-[#0C1F0C] rounded-[1px]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen Header -->
+    <div class="px-5 pt-2 pb-3 flex items-center justify-between">
+      <!-- Screen Title (32px display font weight 800) -->
+      <h1 class="text-[32px] font-[800] text-[#0C1F0C] tracking-tight">رتبه‌ها</h1>
+
+      <!-- Points Chip on Left (RTL context) -->
+      <div class="h-8 px-3.5 bg-[#DDF0DD] rounded-full flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-[#0F770F]" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <span class="text-[14px] font-[700] text-[#0F770F] tracking-wide">۸٬۴۲۰</span>
+      </div>
+    </div>
+
+    <!-- Segmented Control: روزانه / ماهانه -->
+    <div class="px-5 mb-2">
+      <div class="bg-[#E8F5E8] p-1 rounded-full flex items-center">
+        <!-- Option: روزانه (Selected) -->
+        <button class="flex-1 h-9 rounded-full bg-[#0F770F] text-white text-[14px] font-[600] flex items-center justify-center shadow-sm transition-all">
+          روزانه
+        </button>
+        <!-- Option: ماهانه -->
+        <button class="flex-1 h-9 rounded-full text-[#455745] hover:text-[#0C1F0C] text-[14px] font-[600] flex items-center justify-center transition-all">
+          ماهانه
+        </button>
+      </div>
+    </div>
+
+    <!-- Caption: رتبه بر اساس پاسخ درست، سپس سرعت -->
+    <div class="px-5 mb-4 text-center">
+      <p class="text-[13px] font-[500] text-[#5C705C]">
+        رتبه بر اساس پاسخ درست، سپس سرعت
+      </p>
+    </div>
+
+    <!-- FOCAL Podium Section -->
+    <div class="px-5 mb-4">
+      <!-- 3 Podium Steps in RTL: Right = Rank 2, Center = Rank 1, Left = Rank 3 -->
+      <div class="grid grid-cols-3 items-end gap-2.5 pt-7">
+        
+        <!-- Rank 2: مریم حسینی (Right Column in RTL) -->
+        <div class="flex flex-col items-center">
+          <!-- Avatar + Rank Badge -->
+          <div class="relative mb-2 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full border-2 border-white shadow-md overflow-hidden bg-white">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB_sH-DiQUnaBLH1fUBjXCvmPH6xIADzTdVCxqQjSf3jrLM6SxNsEGCwYGKtlp5Sko9GdzQqFmdIMS6Dmsd2uswxdiYkB4GMvIjycsAK0zHKH-thgs4vhJUWG7WT8bDm9F7sLxDMVFB31tqU1H4YGsHsIcMSnaaqMYUIE0pz7RSgzx402LBci3PAgkioJh0YglaYUKLP5PABqFLhZBwC2f67jma1X1-lDvcTsO7nxIcv9lKj6Fb5RRXdRlCN9zcqB9Yv9vJ3mqw9LGUA" alt="مریم حسینی" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-2 bg-[#DDF0DD] border-2 border-white text-[#0F770F] text-[12px] font-[800] w-6 h-6 rounded-full flex items-center justify-center shadow-sm">
+              ۲
+            </div>
+          </div>
+          <!-- Name & Score -->
+          <div class="text-center mt-1 w-full">
+            <p class="text-[13px] font-[700] text-[#0C1F0C] truncate">مریم حسینی</p>
+            <p class="text-[12px] font-[700] text-[#0F770F]">۱٬۵۱۰</p>
+          </div>
+          <!-- Podium Block Rank 2 -->
+          <div class="w-full h-[76px] mt-2 rounded-t-[16px] bg-[#DDF0DD] flex flex-col items-center justify-center border-t border-x border-[#C2E4C2]">
+            <span class="text-[20px] font-[800] text-[#0F770F]">۲</span>
+            <span class="text-[10px] font-[600] text-[#5C705C]">مقام دوم</span>
+          </div>
+        </div>
+
+        <!-- Rank 1: رضا کریمی (Center Column, Larger, Gold Crown Badge) -->
+        <div class="flex flex-col items-center relative -top-3">
+          <!-- Small Gold Crown Icon -->
+          <div class="mb-1 text-amber-500 drop-shadow-sm animate-bounce" style="animation-duration: 2.5s;">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="#F59E0B" stroke="#D97706" stroke-width="1.5">
+              <path d="M3 17h18a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zm1-3l3-7 4 4 4-4 3 7H4z"/>
+            </svg>
+          </div>
+          <!-- Avatar + Rank 1 Badge -->
+          <div class="relative mb-2 flex flex-col items-center">
+            <div class="w-20 h-20 rounded-full border-[3px] border-[#0F770F] shadow-lg overflow-hidden bg-white ring-4 ring-[#DDF0DD]">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTRQh6Fo36qNrB1ZpejRKCt-8X3o6BDa6G8JF8Km7-UKvwqdjMY06q8OvG6sKfc0BW7PJssSEUH1Zz4dIdPxlocooXfPCI4DBmv-w-8lPlRSCmwm4A6nNzIlPVVVIKm6jOczyfJXUmirE87d9k_4tVrngcwTwOeTnByrIHxperERJrfnfU5gteeFvxZYRIdej2LfFL3XRsX6qBlw6jpONXaajRPoYys7Pn6Vy34KyXeIwn28s6AlBd7xq8iH_yBY0df4E-UQr9_x7yig" alt="رضا کریمی" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-2.5 bg-[#0F770F] border-2 border-white text-white text-[13px] font-[800] w-7 h-7 rounded-full flex items-center justify-center shadow-md">
+              ۱
+            </div>
+          </div>
+          <!-- Name & Score -->
+          <div class="text-center mt-1.5 w-full">
+            <p class="text-[14px] font-[800] text-[#0C1F0C] truncate">رضا کریمی</p>
+            <p class="text-[13px] font-[800] text-[#0F770F]">۱٬۵۴۰</p>
+          </div>
+          <!-- Podium Block Rank 1 -->
+          <div class="w-full h-[104px] mt-2 rounded-t-[18px] bg-gradient-to-b from-[#CDB4FF] to-[#DDF0DD] flex flex-col items-center justify-center border-t border-x border-[#B996FF] shadow-sm">
+            <span class="text-[26px] font-[800] text-[#4A269B]">۱</span>
+            <span class="text-[11px] font-[700] text-[#5E3EA3]">قهرمان امروز</span>
+          </div>
+        </div>
+
+        <!-- Rank 3: علی رضایی (Left Column in RTL) -->
+        <div class="flex flex-col items-center">
+          <!-- Avatar + Rank Badge -->
+          <div class="relative mb-2 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full border-2 border-white shadow-md overflow-hidden bg-white">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqwHpIKWCYILeZdDwVx_thwbSnG91W38X7t84I1xuRpKeibQT6G-WjzbvfzHpioDLEeINDs2NecsHNW4OwrW_9ZehLVEAA9Knx_8-E8sSbpil8s3tpdQqP8WJWxjzpNVynmjp0Nk7mTjDWEnNgKdaBegbUV8PpDWXsCQmlYKw_R_pNE3moXO9-dxncYFjVZqx2UwPYBGYobQML_dLKDrTw3TGoAOJI0mnn0Lxiy0XrLygeAH2sMXOpE1tWRGdE5KZeejCbVnIRjnwKyQ" alt="علی رضایی" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-2 bg-[#DDF0DD] border-2 border-white text-[#0F770F] text-[12px] font-[800] w-6 h-6 rounded-full flex items-center justify-center shadow-sm">
+              ۳
+            </div>
+          </div>
+          <!-- Name & Score -->
+          <div class="text-center mt-1 w-full">
+            <p class="text-[13px] font-[700] text-[#0C1F0C] truncate">علی رضایی</p>
+            <p class="text-[12px] font-[700] text-[#0F770F]">۱٬۴۹۰</p>
+          </div>
+          <!-- Podium Block Rank 3 -->
+          <div class="w-full h-[58px] mt-2 rounded-t-[16px] bg-[#DDF0DD] flex flex-col items-center justify-center border-t border-x border-[#C2E4C2]">
+            <span class="text-[18px] font-[800] text-[#0F770F]">۳</span>
+            <span class="text-[10px] font-[600] text-[#5C705C]">مقام سوم</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- White List Card (Ranks 4 to 7) -->
+    <div class="px-5 mb-3 flex-1">
+      <div class="bg-white rounded-[20px] custom-shadow p-2 divide-y divide-[#D3E4D3]/60 border border-[#D3E4D3]/40">
+        
+        <!-- Row 4: نیما صادقی -->
+        <div class="flex items-center justify-between py-2.5 px-2.5 hover:bg-[#F9FCF9] rounded-xl transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="w-5 text-center text-[15px] font-[700] text-[#5C705C]">۴</span>
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-[#D3E4D3] bg-[#F4FCF4] shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrAqr8rdKKiCK9urjn46VYBYhR-QiwgCxQNgwNwiEVAUkYbuci0U7L31_ori06HbJYrA9krQKbf4TLqQw-srq9BhQaKXmAyx_qBS0h3F0qLxdqegGG4VMOYdXa0NaU3_OIyO2og49nnxeZLaWk7rtmFODTHoRHgiu3RMfsz1vK9IDRZpude90PMrLRgOR6Dj1J0wWsRc9VTtPaVBflFaY879Or_DMSQ2AonNjKcniXbbBF71WCCoVFQdvUxOSA" alt="نیما صادقی" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[14px] font-[700] text-[#0C1F0C]">نیما صادقی</span>
+              <span class="text-[12px] font-[500] text-[#5C705C]">۱۵/۱۵ درست</span>
+            </div>
+          </div>
+          <span class="text-[14px] font-[700] text-[#0F770F]">۱٬۴۷۰</span>
+        </div>
+
+        <!-- Row 5: لیلا موسوی -->
+        <div class="flex items-center justify-between py-2.5 px-2.5 hover:bg-[#F9FCF9] rounded-xl transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="w-5 text-center text-[15px] font-[700] text-[#5C705C]">۵</span>
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-[#D3E4D3] bg-[#F4FCF4] shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvZhqnE6nl-Z-P4AZ78pSoRhuZO3ezNdOXRQT3RFFKZLzUPcb7LXeo_ZLw4M2Vg1IeZRMqBJN9HOsJZhJ8BnIG_1pwYOLBVQ4a8omzjIPgdQwceOW7IHheISGNZDDTHkP8UylvPgRFVm13q2TqrG_4ydAMNTd9qC-wczVJBqXTX6IB1kUnzqCWB4EwAP2rHFAQBAJcsL3MNtcecXr663fj-ti0hZZqN5SXA-s0HODu-uLiug_W_X_CZrTo4l3j8emC5ddPUO5ymBekNA" alt="لیلا موسوی" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[14px] font-[700] text-[#0C1F0C]">لیلا موسوی</span>
+              <span class="text-[12px] font-[500] text-[#5C705C]">۱۵/۱۵ درست</span>
+            </div>
+          </div>
+          <span class="text-[14px] font-[700] text-[#0F770F]">۱٬۴۵۰</span>
+        </div>
+
+        <!-- Row 6: امیر جعفری -->
+        <div class="flex items-center justify-between py-2.5 px-2.5 hover:bg-[#F9FCF9] rounded-xl transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="w-5 text-center text-[15px] font-[700] text-[#5C705C]">۶</span>
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-[#D3E4D3] bg-[#F4FCF4] shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqwHpIKWCYILeZdDwVx_thwbSnG91W38X7t84I1xuRpKeibQT6G-WjzbvfzHpioDLEeINDs2NecsHNW4OwrW_9ZehLVEAA9Knx_8-E8sSbpil8s3tpdQqP8WJWxjzpNVynmjp0Nk7mTjDWEnNgKdaBegbUV8PpDWXsCQmlYKw_R_pNE3moXO9-dxncYFjVZqx2UwPYBGYobQML_dLKDrTw3TGoAOJI0mnn0Lxiy0XrLygeAH2sMXOpE1tWRGdE5KZeejCbVnIRjnwKyQ" alt="امیر جعفری" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[14px] font-[700] text-[#0C1F0C]">امیر جعفری</span>
+              <span class="text-[12px] font-[500] text-[#5C705C]">۱۵/۱۵ درست</span>
+            </div>
+          </div>
+          <span class="text-[14px] font-[700] text-[#0F770F]">۱٬۴۳۰</span>
+        </div>
+
+        <!-- Row 7: زهرا کاظمی -->
+        <div class="flex items-center justify-between py-2.5 px-2.5 hover:bg-[#F9FCF9] rounded-xl transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="w-5 text-center text-[15px] font-[700] text-[#5C705C]">۷</span>
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-[#D3E4D3] bg-[#F4FCF4] shrink-0">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCQpSo-_nKFnoDthJSjvoX4ylcMSA98tpkHNQoIkiDKaF2X6f1YL3uymo_xa7OjGrDvdyhXqPw6kLa7Ers4nbAA6sX-eGWI-4cqnAcwfcKSuPdE6Qm1UsOyZYbp0UIBAi_DPWyUTBjJFs5hfoNYKVm1_VZhleGql9kX0RYVC0o-JkkHHozaf6jmRkuPbe07E_Efpgn-8yel_XGQU9kF2N5yPUDCwH7V9GXMxE3RdUwoOba8-IL5qdU_iw-SWQ" alt="زهرا کاظمی" class="w-full h-full object-cover">
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[14px] font-[700] text-[#0C1F0C]">زهرا کاظمی</span>
+              <span class="text-[12px] font-[500] text-[#5C705C]">۱۵/۱۵ درست</span>
+            </div>
+          </div>
+          <span class="text-[14px] font-[700] text-[#0F770F]">۱٬۴۱۰</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Pinned Own Row at bottom of list area: ۱۸ سارا احمدی (شما) ۱٬۲۴۰ -->
+    <div class="px-5 mb-3">
+      <div class="bg-[#DDF0DD] border border-[#0F770F]/30 rounded-[18px] p-3 flex items-center justify-between shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-[#0F770F] text-white flex items-center justify-center text-[13px] font-[800]">
+            ۱۸
+          </div>
+          <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
+            <img src="https://lh3.googleusercontent.com/aida/ALJJyrCQpSo-_nKFnoDthJSjvoX4ylcMSA98tpkHNQoIkiDKaF2X6f1YL3uymo_xa7OjGrDvdyhXqPw6kLa7Ers4nbAA6sX-eGWI-4cqnAcwfcKSuPdE6Qm1UsOyZYbp0UIBAi_DPWyUTBjJFs5hfoNYKVm1_VZhleGql9kX0RYVC0o-JkkHHozaf6jmRkuPbe07E_Efpgn-8yel_XGQU9kF2N5yPUDCwH7V9GXMxE3RdUwoOba8-IL5qdU_iw-SWQ" alt="سارا احمدی" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[14px] font-[800] text-[#0C1F0C]">سارا احمدی</span>
+              <span class="text-[11px] font-[700] bg-[#0F770F] text-white px-2 py-0.5 rounded-full">شما</span>
+            </div>
+            <span class="text-[12px] font-[600] text-[#455745]">۱۲/۱۵ درست • زمان ۸۶ ثانیه</span>
+          </div>
+        </div>
+        <div class="text-left">
+          <span class="text-[15px] font-[800] text-[#0F770F]">۱٬۲۴۰</span>
+          <span class="block text-[10px] font-[600] text-[#5C705C]">امتیاز</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Tab Bar: Exactly 4 Tabs in RTL order from RIGHT to LEFT:
+         ۱. خانه (home icon)
+         ۲. رتبه‌ها (trophy icon) -> ACTIVE in #0F770F with #DDF0DD pill behind icon
+         ۳. تاریخچه (clock icon)
+         ۴. پروفایل (user icon)
+    -->
+    <div class="fixed bottom-0 w-[393px] bg-white border-t border-[#D3E4D3] px-3 pt-2 pb-6 flex items-center justify-around z-50">
+      
+      <!-- Tab 1: خانه (Home) -->
+      <button class="flex flex-col items-center justify-center gap-1 w-16 py-1 text-[#455745] hover:text-[#0C1F0C] transition-colors">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="text-[12px] font-[600]">خانه</span>
+      </button>
+
+      <!-- Tab 2: رتبه‌ها (Leaderboard - ACTIVE) -->
+      <button class="flex flex-col items-center justify-center gap-0.5 w-16 py-0.5 text-[#0F770F]">
+        <div class="bg-[#DDF0DD] rounded-full px-3 py-1 flex items-center justify-center">
+          <svg class="w-6 h-6 text-[#0F770F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+            <path d="M4 22h16"/>
+            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+          </svg>
+        </div>
+        <span class="text-[12px] font-[700] text-[#0F770F]">رتبه‌ها</span>
+      </button>
+
+      <!-- Tab 3: تاریخچه (History) -->
+      <button class="flex flex-col items-center justify-center gap-1 w-16 py-1 text-[#455745] hover:text-[#0C1F0C] transition-colors">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span class="text-[12px] font-[600]">تاریخچه</span>
+      </button>
+
+      <!-- Tab 4: پروفایل (Profile) -->
+      <button class="flex flex-col items-center justify-center gap-1 w-16 py-1 text-[#455745] hover:text-[#0C1F0C] transition-colors">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span class="text-[12px] font-[600]">پروفایل</span>
+      </button>
+
+    </div>
+
+    <!-- Home Indicator Bar -->
+    <div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-[#0C1F0C]/25 rounded-full z-50 pointer-events-none"></div>
+
+  </div>
+</body>
+</html>

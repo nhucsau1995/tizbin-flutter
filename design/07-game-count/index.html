@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>تیزبین - شمارش اشکال همسان</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#ffffff",
+            "success-bg": "#E3F4E9",
+            "text-tertiary": "#5C705C",
+            "on-surface": "#1a1c1c",
+            "support-strong": "#A978FF",
+            "accent-fill": "#0F770F",
+            "secondary-container": "#91f77e",
+            "text-primary": "#0C1F0C",
+            "surface-container": "#eeeeee",
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#d2bbff",
+            "primary-container": "#0f770f",
+            "primary": "#005c04",
+            "on-secondary": "#ffffff",
+            "banana-yellow": "#F5C518",
+            "background": "#F4FCF4",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#7bdc6b",
+            "secondary": "#006e06",
+            "on-primary": "#ffffff",
+            "surface-tint": "#006e06",
+            "on-surface-variant": "#3f4a3b",
+            "text-secondary": "#455745",
+            "on-primary-fixed": "#002201",
+            "surface-container-high": "#e8e8e8",
+            "on-secondary-fixed-variant": "#005303",
+            "warning-text": "#A75906",
+            "on-secondary-container": "#007306",
+            "danger-text": "#CE2020",
+            "warning-bg": "#FAEFE1",
+            "tertiary-container": "#705a9e",
+            "on-secondary-fixed": "#002200",
+            "surface-alt": "#E8F5E8",
+            "danger-bg": "#FBE5E5",
+            "on-tertiary-container": "#ecdfff",
+            "surface": "#f9f9f9",
+            "on-background": "#1a1c1c",
+            "apple-red": "#E5484D",
+            "accent-tint": "#DDF0DD",
+            "secondary-fixed-dim": "#79dd68",
+            "tertiary": "#574284",
+            "on-tertiary-fixed": "#230a4e",
+            "surface-container-low": "#f3f3f4",
+            "sky-blue": "#3B9EFF",
+            "on-primary-fixed-variant": "#005303",
+            "inverse-on-surface": "#f0f1f1",
+            "outline": "#6f7a6a",
+            "on-tertiary": "#ffffff",
+            "divider": "#D3E4D3",
+            "accent-pressed": "#0E6D0E",
+            "inverse-primary": "#7bdc6b",
+            "surface-variant": "#e2e2e2",
+            "primary-fixed": "#97fa84",
+            "control-border": "#6DA06D",
+            "secondary-fixed": "#94fa81",
+            "orange": "#FF8A3D",
+            "on-primary-container": "#99fc86",
+            "on-tertiary-fixed-variant": "#503b7c",
+            "surface-dim": "#dadada",
+            "tertiary-fixed": "#eaddff",
+            "error": "#ba1a1a",
+            "surface-bright": "#f9f9f9",
+            "outline-variant": "#bfcab7",
+            "success-text": "#0E7C3A",
+            "surface-container-highest": "#e2e2e2",
+            "inverse-surface": "#2f3131",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "label": ["Vazirmatn"],
+            "body": ["Vazirmatn"],
+            "display": ["Vazirmatn"],
+            "caption": ["Vazirmatn"],
+            "title": ["Vazirmatn"]
+          },
+          "fontSize": {
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display": ["32px", { "lineHeight": "40px", "fontWeight": "800" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .soft-card-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 12, 0.04), 0 8px 24px rgba(12, 31, 12, 0.06);
+    }
+    .timer-ring-circle {
+      stroke-dasharray: 213;
+      stroke-dashoffset: 48;
+      transition: stroke-dashoffset 1s linear;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex justify-center items-start text-text-primary antialiased selection:bg-accent-tint">
+<!-- Mobile Simulator Frame (393px typical layout, safe padded) -->
+<main class="w-full max-w-[393px] min-h-screen bg-background flex flex-col justify-between px-5 pt-3 pb-8 relative overflow-hidden">
+<!-- Top Bar & Progress Section -->
+<header class="w-full flex flex-col gap-3.5">
+<!-- Status Meta Bar -->
+<div class="flex items-center justify-between pt-2">
+<!-- Right side (RTL first): Exit icon and Challenge round counter -->
+<div class="flex items-center gap-2">
+<button aria-label="خروج از بازی" class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-alt text-text-secondary active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-lowest border border-divider">
+<span class="text-caption font-caption text-text-primary">۷ از ۱۵</span>
+</div>
+</div>
+<!-- Center: Circular Countdown Timer -->
+<div class="relative flex flex-col items-center justify-center -my-2">
+<svg class="w-[72px] h-[72px] transform -rotate-90" viewbox="0 0 76 76">
+<!-- Background track circle -->
+<circle cx="38" cy="38" fill="none" r="34" stroke="#E8F5E8" stroke-width="5"></circle>
+<!-- Active progress circle -->
+<circle class="timer-ring-circle" cx="38" cy="38" fill="none" r="34" stroke="#0F770F" stroke-linecap="round" stroke-width="5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none pt-0.5">
+<span class="text-title font-title text-accent-fill leading-none">۵۱</span>
+<span class="text-[10px] font-caption text-text-secondary leading-none mt-0.5">ثانیه</span>
+</div>
+</div>
+<!-- Left side: Score chip -->
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-tint text-accent-fill">
+<span class="text-label font-label">۷۳۵</span>
+<span class="material-symbols-outlined text-[16px] text-banana-yellow" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- 15-Segment Level Progress Bar -->
+<div class="w-full grid grid-cols-15 gap-1 pt-1" style="grid-template-columns: repeat(15, minmax(0, 1fr));">
+<!-- 6 Completed Segments -->
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<div class="h-1.5 rounded-full bg-accent-fill"></div>
+<!-- 9 Remaining Segments -->
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+<div class="h-1.5 rounded-full bg-surface-alt"></div>
+</div>
+</header>
+<!-- Prompt / Instruction Text -->
+<section class="text-center my-3">
+<div class="inline-flex items-center justify-center gap-2 mb-1">
+<span class="material-symbols-outlined text-banana-yellow text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<h1 class="text-title font-title text-text-primary tracking-normal">چند ستاره می‌بینی؟</h1>
+</div>
+<p class="text-label font-label text-text-secondary">تعداد ستاره‌های زرد رنگ را بشمار و انتخاب کن</p>
+</section>
+<!-- Focal Visual Game Board Card -->
+<section class="w-full bg-surface-container-lowest border-[1.5px] border-divider rounded-2xl p-4 soft-card-shadow relative h-[300px] flex items-center justify-center overflow-hidden">
+<!-- Subtle internal decorative grid dots -->
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#6DA06D 1px, transparent 1px); background-size: 16px 16px;"></div>
+<!-- 2D Vector Playground (Absolute Coordinates for balanced scatter) -->
+<div class="relative w-full h-full">
+<!-- 6 YELLOW STARS (Target Object, #F5C518) -->
+<!-- Star 1 -->
+<div class="absolute top-4 right-6 w-11 h-11 transition-transform hover:scale-110">
+<svg class="w-full h-full drop-shadow-none" fill="#F5C518" viewbox="0 0 24 24">
+<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+</svg>
+</div>
+<!-- Star 2 -->
+<div class="absolute top-16 left-8 w-12 h-12 transition-transform hover:scale-110">
+<svg class="w-full h-full" fill="#F5C518" viewbox="0 0 24 24">
+<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+</svg>
+</div>
+<!-- Star 3 -->
+<div class="absolute top-28 right-24 w-10 h-10 transition-transform hover:scale-110">
+<svg class="w-full h-full" fill="#F5C518" viewbox="0 0 24 24">
+<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+</svg>
+</div>
+<!-- Star 4 -->
+<div class="absolute bottom-20 right-8 w-11 h-11 transition-transform hover:scale-110">
+<svg class="w-full h-full" fill="#F5C518" viewbox="0 0 24 24">
+<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+</svg>
+</div>
+<!-- Star 5 -->
+<div class="absolute bottom-8 left-20 w-12 h-12 transition-transform hover:scale-110">
+<svg class="w-full h-full" fill="#F5C518" viewbox="0 0 24 24">
+<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+</svg>
+</div>
+<!-- Star 6 -->
+<div class="absolute top-36 left-44 w-10 h-10 transition-transform hover:scale-110">
+<svg class="w-full h-full" fill="#F5C518" viewbox="0 0 24 24">
+<polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+</svg>
+</div>
+<!-- 4 SKY-BLUE CIRCLES (#3B9EFF) -->
+<!-- Circle 1 -->
+<div class="absolute top-6 left-28 w-8 h-8 rounded-full bg-sky-blue"></div>
+<!-- Circle 2 -->
+<div class="absolute bottom-24 left-10 w-9 h-9 rounded-full bg-sky-blue"></div>
+<!-- Circle 3 -->
+<div class="absolute top-20 right-4 w-7 h-7 rounded-full bg-sky-blue"></div>
+<!-- Circle 4 -->
+<div class="absolute bottom-6 right-32 w-9 h-9 rounded-full bg-sky-blue"></div>
+<!-- 3 APPLE-RED HEARTS (#E5484D) -->
+<!-- Heart 1 -->
+<div class="absolute top-5 right-36 w-8 h-8">
+<svg class="w-full h-full" fill="#E5484D" viewbox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+</svg>
+</div>
+<!-- Heart 2 -->
+<div class="absolute top-36 left-8 w-9 h-9">
+<svg class="w-full h-full" fill="#E5484D" viewbox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+</svg>
+</div>
+<!-- Heart 3 -->
+<div class="absolute bottom-5 right-12 w-8 h-8">
+<svg class="w-full h-full" fill="#E5484D" viewbox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- 2x2 Answer Grid Options -->
+<section class="w-full my-3">
+<div class="grid grid-cols-2 gap-3">
+<!-- Option 4 -->
+<button class="h-[72px] bg-surface-container-lowest border-[1.5px] border-control-border rounded-2xl flex items-center justify-center soft-card-shadow active:scale-95 active:bg-accent-tint active:border-accent-fill transition-all duration-150" type="button">
+<span class="text-display font-display text-text-primary">۴</span>
+</button>
+<!-- Option 5 -->
+<button class="h-[72px] bg-surface-container-lowest border-[1.5px] border-control-border rounded-2xl flex items-center justify-center soft-card-shadow active:scale-95 active:bg-accent-tint active:border-accent-fill transition-all duration-150" type="button">
+<span class="text-display font-display text-text-primary">۵</span>
+</button>
+<!-- Option 6 (Correct target count) -->
+<button class="h-[72px] bg-surface-container-lowest border-[1.5px] border-control-border rounded-2xl flex items-center justify-center soft-card-shadow active:scale-95 active:bg-accent-tint active:border-accent-fill transition-all duration-150" type="button">
+<span class="text-display font-display text-text-primary">۶</span>
+</button>
+<!-- Option 7 -->
+<button class="h-[72px] bg-surface-container-lowest border-[1.5px] border-control-border rounded-2xl flex items-center justify-center soft-card-shadow active:scale-95 active:bg-accent-tint active:border-accent-fill transition-all duration-150" type="button">
+<span class="text-display font-display text-text-primary">۷</span>
+</button>
+</div>
+</section>
+<!-- Bottom Helper and Boost Controls -->
+<footer class="w-full flex items-center justify-between pt-1">
+<!-- Hint helper button -->
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-lowest border border-divider text-text-secondary active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px] text-banana-yellow" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="text-label font-label">راهنما (۲)</span>
+</button>
+<!-- Multiplier Streak Indicator -->
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-warning-bg text-warning-text border border-[#F5E2C7]">
+<span class="material-symbols-outlined text-[18px] text-orange" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-caption font-caption font-bold">ضریب سرعت فعال است</span>
+</div>
+</footer>
+</main>
+<script>
+    // Lightweight audio/haptic simulation for answer interactions
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if ('vibrate' in navigator) {
+          navigator.vibrate(20);
+        }
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>تیزبین - داشبورد مسابقات روزانه</title>
+<!-- Google Fonts: Vazirmatn -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#1a1c1c",
+            "tertiary-fixed-dim": "#d2bbff",
+            "on-tertiary-container": "#ecdfff",
+            "inverse-surface": "#2f3131",
+            "accent-fill": "#0F770F",
+            "banana-yellow": "#F5C518",
+            "on-tertiary-fixed-variant": "#503b7c",
+            "background": "#F4FCF4",
+            "on-tertiary-fixed": "#230a4e",
+            "control-border": "#6DA06D",
+            "secondary": "#006e06",
+            "primary-container": "#0f770f",
+            "on-surface": "#1a1c1c",
+            "text-tertiary": "#5C705C",
+            "on-secondary-container": "#007306",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed": "#97fa84",
+            "accent-tint": "#DDF0DD",
+            "surface-variant": "#e2e2e2",
+            "tertiary": "#574284",
+            "secondary-container": "#91f77e",
+            "error-container": "#ffdad6",
+            "accent-pressed": "#0E6D0E",
+            "secondary-fixed": "#94fa81",
+            "primary": "#005c04",
+            "divider": "#D3E4D3",
+            "warning-bg": "#FAEFE1",
+            "on-secondary-fixed": "#002200",
+            "surface": "#f9f9f9",
+            "on-secondary-fixed-variant": "#005303",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e8e8e8",
+            "surface-dim": "#dadada",
+            "inverse-primary": "#7bdc6b",
+            "danger-bg": "#FBE5E5",
+            "support-strong": "#A978FF",
+            "on-surface-variant": "#3f4a3b",
+            "secondary-fixed-dim": "#79dd68",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e2e2e2",
+            "text-secondary": "#455745",
+            "surface-container": "#eeeeee",
+            "tertiary-fixed": "#eaddff",
+            "danger-text": "#CE2020",
+            "on-primary-fixed": "#002201",
+            "text-primary": "#0C1F0C",
+            "surface-container-low": "#f3f3f4",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#705a9e",
+            "outline-variant": "#bfcab7",
+            "success-text": "#0E7C3A",
+            "surface-alt": "#E8F5E8",
+            "on-primary-fixed-variant": "#005303",
+            "primary-fixed-dim": "#7bdc6b",
+            "sky-blue": "#3B9EFF",
+            "apple-red": "#E5484D",
+            "inverse-on-surface": "#f0f1f1",
+            "warning-text": "#A75906",
+            "on-secondary": "#ffffff",
+            "on-error": "#ffffff",
+            "orange": "#FF8A3D",
+            "error": "#ba1a1a",
+            "outline": "#6f7a6a",
+            "surface-tint": "#006e06",
+            "surface-bright": "#f9f9f9",
+            "success-bg": "#E3F4E9",
+            "on-primary-container": "#99fc86"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-lg": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "1.25rem",
+            "space-md": "0.75rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "body": ["Vazirmatn"],
+            "label": ["Vazirmatn"],
+            "title": ["Vazirmatn"],
+            "caption": ["Vazirmatn"],
+            "display": ["Vazirmatn"]
+          },
+          "fontSize": {
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "fontWeight": "800" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #F4FCF4;
+    }
+    .custom-soft-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 12, 0.04), 0 8px 24px rgba(12, 31, 12, 0.06);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint selection:text-primary">
+<!-- 393px Fixed Frame Mobile Wrapper -->
+<div class="w-full max-w-[393px] min-h-screen bg-background relative flex flex-col pb-28 pt-4">
+<!-- Top App Bar / Header -->
+<header class="flex justify-between items-center w-full px-5 pt-4 pb-2 bg-background select-none">
+<!-- Right: User Avatar & Greeting -->
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-divider shadow-sm shrink-0">
+<img alt="تصویر پروفایل کاربر سارا" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrCQpSo-_nKFnoDthJSjvoX4ylcMSA98tpkHNQoIkiDKaF2X6f1YL3uymo_xa7OjGrDvdyhXqPw6kLa7Ers4nbAA6sX-eGWI-4cqnAcwfcKSuPdE6Qm1UsOyZYbp0UIBAi_DPWyUTBjJFs5hfoNYKVm1_VZhleGql9kX0RYVC0o-JkkHHozaf6jmRkuPbe07E_Efpgn-8yel_XGQU9kF2N5yPUDCwH7V9GXMxE3RdUwoOba8-IL5qdU_iw-SWQ"/>
+</div>
+<div class="flex flex-col">
+<h1 class="font-title text-title text-text-primary tracking-tight">سلام سارا</h1>
+<span class="font-caption text-caption text-text-tertiary">آماده مسابقه امروز هستی؟</span>
+</div>
+</div>
+<!-- Left: Points Chip -->
+<div class="flex items-center gap-1.5 bg-accent-tint px-3.5 py-1.5 rounded-full border border-control-border/30">
+<span class="font-label text-label text-accent-fill tracking-wide">⭐ ۱٬۲۵۰</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-5 pt-3 flex flex-col gap-6">
+<!-- Hero Focal Card: Daily Competition -->
+<section class="w-full rounded-[20px] bg-gradient-to-br from-accent-fill to-accent-pressed p-5 text-surface-container-lowest custom-soft-shadow flex flex-col relative overflow-hidden select-none">
+<!-- Header Tag -->
+<div class="flex items-center justify-between mb-4">
+<div class="inline-flex items-center gap-1.5 bg-surface-container-lowest/20 backdrop-blur-md px-3 py-1 rounded-full text-surface-container-lowest font-caption text-caption">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>مسابقه امروز</span>
+</div>
+<span class="font-caption text-caption text-surface-container-lowest/80 bg-surface-container-lowest/10 px-2.5 py-0.5 rounded-full">
+            روز بیست‌وچهارم
+          </span>
+</div>
+<!-- Hero Headline -->
+<div class="mb-4">
+<h2 class="font-title text-title text-surface-container-lowest mb-1">چالش ذهن و تمرکز تیزبین</h2>
+<p class="font-caption text-caption text-surface-container-lowest/90">امتیازت رو بالا ببر و جایگاهت رو در جدول هفتگی ارتقا بده!</p>
+</div>
+<!-- Translucent Badges Info Facts -->
+<div class="grid grid-cols-3 gap-2 mb-5">
+<div class="bg-black/20 backdrop-blur-sm rounded-xl py-2 px-1 flex flex-col items-center justify-center text-center">
+<span class="font-label text-label text-surface-container-lowest">۱۵ چالش</span>
+<span class="font-caption text-caption text-surface-container-lowest/70 text-[11px]">مراحل متوالی</span>
+</div>
+<div class="bg-black/20 backdrop-blur-sm rounded-xl py-2 px-1 flex flex-col items-center justify-center text-center">
+<span class="font-label text-label text-surface-container-lowest">۹۰ ثانیه</span>
+<span class="font-caption text-caption text-surface-container-lowest/70 text-[11px]">فرصت طلایی</span>
+</div>
+<div class="bg-black/20 backdrop-blur-sm rounded-xl py-2 px-1 flex flex-col items-center justify-center text-center">
+<span class="font-label text-label text-surface-container-lowest">۱٬۵۹۰</span>
+<span class="font-caption text-caption text-surface-container-lowest/70 text-[11px]">سقف امتیاز</span>
+</div>
+</div>
+<!-- Primary Start Button -->
+<button class="w-full h-14 bg-surface-container-lowest text-accent-fill hover:bg-surface-alt active:scale-[0.98] transition-transform duration-150 rounded-full flex items-center justify-center gap-2 font-label text-label font-bold shadow-md cursor-pointer">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>شروع بازی</span>
+</button>
+<!-- Under-Button Caption -->
+<p class="font-caption text-caption text-surface-container-lowest/80 text-center mt-3">
+          فقط یک تلاش رسمی در روز
+        </p>
+</section>
+<!-- Section: بازی‌های امروز -->
+<section class="flex flex-col gap-3 select-none">
+<div class="flex items-center justify-between">
+<h3 class="font-title text-title text-text-primary text-[18px]">بازی‌های امروز</h3>
+<span class="font-caption text-caption text-text-tertiary">۵ مینی‌گیم</span>
+</div>
+<!-- 5 Game Tiles Horizontal Scroll / Row -->
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar pb-1 pt-1 -mx-5 px-5">
+<!-- Tile 1 -->
+<div class="w-[72px] h-[84px] shrink-0 bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider flex flex-col items-center justify-center gap-2 custom-soft-shadow hover:border-accent-fill/50 transition-colors">
+<div class="w-9 h-9 rounded-xl bg-accent-tint/60 flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[22px]">visibility</span>
+</div>
+<span class="font-caption text-caption text-text-primary text-[13px]">تفاوت</span>
+</div>
+<!-- Tile 2 -->
+<div class="w-[72px] h-[84px] shrink-0 bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider flex flex-col items-center justify-center gap-2 custom-soft-shadow hover:border-accent-fill/50 transition-colors">
+<div class="w-9 h-9 rounded-xl bg-accent-tint/60 flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[22px]">blur_on</span>
+</div>
+<span class="font-caption text-caption text-text-primary text-[13px]">ناپدید</span>
+</div>
+<!-- Tile 3 -->
+<div class="w-[72px] h-[84px] shrink-0 bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider flex flex-col items-center justify-center gap-2 custom-soft-shadow hover:border-accent-fill/50 transition-colors">
+<div class="w-9 h-9 rounded-xl bg-accent-tint/60 flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[22px]">pin</span>
+</div>
+<span class="font-caption text-caption text-text-primary text-[13px]">شمارش</span>
+</div>
+<!-- Tile 4 -->
+<div class="w-[72px] h-[84px] shrink-0 bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider flex flex-col items-center justify-center gap-2 custom-soft-shadow hover:border-accent-fill/50 transition-colors">
+<div class="w-9 h-9 rounded-xl bg-accent-tint/60 flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+</div>
+<span class="font-caption text-caption text-text-primary text-[13px]">یکسان؟</span>
+</div>
+<!-- Tile 5 -->
+<div class="w-[72px] h-[84px] shrink-0 bg-surface-container-lowest rounded-[16px] border-[1.5px] border-divider flex flex-col items-center justify-center gap-2 custom-soft-shadow hover:border-accent-fill/50 transition-colors">
+<div class="w-9 h-9 rounded-xl bg-accent-tint/60 flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[22px]">style</span>
+</div>
+<span class="font-caption text-caption text-text-primary text-[13px]">جفت‌ها</span>
+</div>
+</div>
+</section>
+<!-- Stats & Progress Cards -->
+<section class="flex flex-col gap-3.5 select-none mb-2">
+<!-- Card 1: Yesterday's Rank -->
+<div class="bg-surface-container-lowest rounded-[20px] p-4.5 custom-soft-shadow border border-divider/40 flex items-center justify-between">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-2xl bg-warning-bg flex items-center justify-center text-banana-yellow shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-secondary">نتیجه روز گذشته</span>
+<h4 class="font-label text-label text-text-primary font-bold">رتبه دیروز: ۴۲ از ۳٬۱۸۰</h4>
+</div>
+</div>
+<div class="bg-accent-tint px-3 py-1.5 rounded-full border border-control-border/40 shrink-0">
+<span class="font-caption text-caption text-accent-fill font-bold">جزو ۲٪ برتر</span>
+</div>
+</div>
+<!-- Card 2: Monthly Tournament -->
+<div class="bg-surface-container-lowest rounded-[20px] p-4.5 custom-soft-shadow border border-divider/40 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-alt flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+<h4 class="font-label text-label text-text-primary font-bold">جدول ماهانه</h4>
+</div>
+<span class="font-caption text-caption text-text-secondary font-medium">۸ از ۱۵ روز ثبت شده (۵۳٪)</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2.5 bg-surface-alt rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-accent-fill rounded-full w-[53%] transition-all duration-500"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Tab Bar -->
+<!-- Matches Shared Components JSON: Home, Leaderboard, History, Profile -->
+<nav class="fixed bottom-0 right-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-2.5 rtl bg-surface-container-lowest border-t border-divider shadow-sm max-w-[393px] mx-auto left-0 select-none">
+<!-- 1: خانه (Active) -->
+<a class="flex flex-col items-center justify-center bg-accent-tint text-primary rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-caption text-caption font-bold">خانه</span>
+</a>
+<!-- 2: رتبه‌ها -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]">leaderboard</span>
+<span class="font-caption text-caption">رتبه‌ها</span>
+</a>
+<!-- 3: تاریخچه -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]">history</span>
+<span class="font-caption text-caption">تاریخچه</span>
+</a>
+<!-- 4: پروفایل -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="font-caption text-caption">پروفایل</span>
+</a>
+</nav>
+</div>
+</body></html>

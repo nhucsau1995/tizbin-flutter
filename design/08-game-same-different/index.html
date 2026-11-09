@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="h-full" dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>یکسان یا متفاوت؟ - بازی تیزبین</title>
+<!-- Persian Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#91f77e",
+            "primary": "#005c04",
+            "surface-dim": "#dadada",
+            "surface-container-low": "#f3f3f4",
+            "accent-tint": "#DDF0DD",
+            "on-surface": "#1a1c1c",
+            "secondary-fixed": "#94fa81",
+            "surface-variant": "#e2e2e2",
+            "on-tertiary-fixed-variant": "#503b7c",
+            "warning-text": "#A75906",
+            "tertiary-container": "#705a9e",
+            "on-tertiary-fixed": "#230a4e",
+            "tertiary-fixed": "#eaddff",
+            "support-strong": "#A978FF",
+            "on-secondary-container": "#007306",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed-variant": "#005303",
+            "on-primary-container": "#99fc86",
+            "sky-blue": "#3B9EFF",
+            "surface-container-high": "#e8e8e8",
+            "inverse-surface": "#2f3131",
+            "success-text": "#0E7C3A",
+            "on-primary": "#ffffff",
+            "success-bg": "#E3F4E9",
+            "primary-fixed-dim": "#7bdc6b",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e2e2e2",
+            "surface": "#f9f9f9",
+            "surface-tint": "#006e06",
+            "danger-bg": "#FBE5E5",
+            "background": "#F4FCF4",
+            "primary-container": "#0f770f",
+            "error": "#ba1a1a",
+            "orange": "#FF8A3D",
+            "text-tertiary": "#5C705C",
+            "on-secondary-fixed-variant": "#005303",
+            "text-primary": "#0C1F0C",
+            "on-secondary-fixed": "#002200",
+            "inverse-on-surface": "#f0f1f1",
+            "text-secondary": "#455745",
+            "tertiary": "#574284",
+            "on-surface-variant": "#3f4a3b",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#97fa84",
+            "on-error": "#ffffff",
+            "accent-fill": "#0F770F",
+            "outline": "#6f7a6a",
+            "on-tertiary-container": "#ecdfff",
+            "on-background": "#1a1c1c",
+            "outline-variant": "#bfcab7",
+            "danger-text": "#CE2020",
+            "surface-container": "#eeeeee",
+            "secondary": "#006e06",
+            "inverse-primary": "#7bdc6b",
+            "warning-bg": "#FAEFE1",
+            "surface-alt": "#E8F5E8",
+            "banana-yellow": "#F5C518",
+            "divider": "#D3E4D3",
+            "on-secondary": "#ffffff",
+            "apple-red": "#E5484D",
+            "secondary-fixed-dim": "#79dd68",
+            "accent-pressed": "#0E6D0E",
+            "tertiary-fixed-dim": "#d2bbff",
+            "control-border": "#6DA06D",
+            "surface-bright": "#f9f9f9",
+            "on-primary-fixed": "#002201"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1rem",
+            "space-md": "0.75rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "1.5rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "body": ["Vazirmatn"],
+            "label": ["Vazirmatn"],
+            "title": ["Vazirmatn"],
+            "display": ["Vazirmatn"],
+            "caption": ["Vazirmatn"]
+          },
+          "fontSize": {
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "display": ["32px", { "lineHeight": "40px", "fontWeight": "800" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Tactile micro-elevation from brand guidelines */
+    .tactile-card {
+      box-shadow: 0 1px 2px rgba(12, 31, 12, 0.04), 0 8px 24px rgba(12, 31, 12, 0.06);
+    }
+
+    /* Prevent selection and enable comfortable mobile touch */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-text-primary h-full flex justify-center items-start overflow-x-hidden antialiased">
+<!-- Mobile Container strictly framed for 393px viewport experience -->
+<main class="w-full max-w-[393px] min-h-screen bg-background flex flex-col justify-between relative px-5 pt-3 pb-8 shadow-xl">
+<!-- Top Safe & App Header Section -->
+<header class="w-full flex flex-col gap-3">
+<!-- Top Bar Items: RTL flow (Right: Question index, Center: Circular Timer, Left: Score & Quit) -->
+<div class="flex items-center justify-between w-full pt-1">
+<!-- Right: Round challenge badge -->
+<div class="flex items-center gap-1.5 bg-surface-container-lowest border border-divider px-3 py-1.5 rounded-full shadow-sm">
+<span class="text-text-secondary font-label text-caption">مرحله</span>
+<span class="text-text-primary font-title text-caption tracking-tight">۱۰ از ۱۵</span>
+</div>
+<!-- Center: Round Circular Countdown SVG Timer -->
+<div class="relative flex items-center justify-center -my-1">
+<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 64 64">
+<!-- Background Track -->
+<circle class="stroke-surface-alt fill-surface-container-lowest" cx="32" cy="32" r="27" stroke-width="4.5"></circle>
+<!-- Animated Progress Ring (~70% left) -->
+<circle class="stroke-accent-fill fill-none" cx="32" cy="32" r="27" stroke-dasharray="169.6" stroke-dashoffset="45" stroke-linecap="round" stroke-width="4.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-text-primary font-display text-title leading-none pt-0.5">۳۴</span>
+<span class="text-text-tertiary font-caption text-[10px] leading-tight">ثانیه</span>
+</div>
+</div>
+<!-- Left: Star Score Badge & Exit Button -->
+<div class="flex items-center gap-2">
+<!-- Score Chip -->
+<div class="flex items-center gap-1 bg-accent-tint text-accent-fill px-3 py-1.5 rounded-full font-label text-caption">
+<span class="text-banana-yellow drop-shadow-sm leading-none text-base">★</span>
+<span class="font-title text-caption tracking-tight">۱٬۰۱۰</span>
+</div>
+<!-- Close / Exit button -->
+<button aria-label="انصراف از بازی" class="w-9 h-9 rounded-full bg-surface-container-lowest border border-divider flex items-center justify-center text-text-secondary hover:text-danger-text active:scale-95 transition-transform duration-150 shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg leading-none" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- 15-Segment Progress Track: 9 Completed, 6 Incomplete -->
+<div aria-label="پیشرفت مراحل" class="w-full flex items-center gap-1 pt-1 px-0.5">
+<!-- 9 Completed Segments (accent #0F770F) -->
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<div class="h-2 flex-1 rounded-full bg-accent-fill"></div>
+<!-- 6 Pending Segments (muted #E8F5E8) -->
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+<div class="h-2 flex-1 rounded-full bg-surface-alt"></div>
+</div>
+</header>
+<!-- Main Interactive Game Board Section -->
+<section class="w-full flex flex-col items-center my-auto py-2">
+<!-- Headline & Explanatory Subtitle -->
+<div class="text-center mb-4 space-y-1">
+<h1 class="text-title font-title text-text-primary tracking-tight">این دو تصویر یکسان‌اند؟</h1>
+<p class="text-caption font-body text-text-secondary">با دقت به جزئیات دو تصویر نگاه کن و تصمیم بگیر</p>
+</div>
+<!-- Focal Element: Two Side-by-Side Comparison Cards (16px radius, pure flat 2D vector) -->
+<div class="w-full flex items-center justify-between gap-3 px-0.5">
+<!-- CARD 1 (Right in RTL): Standard Home with Two Cyan Blue Windows -->
+<div class="flex-1 flex flex-col items-center">
+<div class="w-full aspect-square bg-surface-container-lowest border-[1.5px] border-divider rounded-[16px] p-3 tactile-card flex items-center justify-center relative overflow-hidden transition-all duration-200">
+<!-- Pure Flat 2D Vector House Illustration -->
+<svg class="w-full h-full max-w-[124px] max-h-[124px]" fill="none" viewbox="0 0 100 100">
+<!-- Background soft ground patch -->
+<ellipse cx="50" cy="88" fill="#E8F5E8" rx="38" ry="6"></ellipse>
+<!-- Chimney & puff -->
+<rect fill="#CE2020" height="18" rx="2" width="9" x="68" y="24"></rect>
+<circle cx="72.5" cy="18" fill="#D3E4D3" r="4.5"></circle>
+<!-- Main House Body (Orange #FF8A3D) -->
+<rect fill="#FF8A3D" height="42" rx="4" width="56" x="22" y="42"></rect>
+<!-- Red Gabled Roof (Apple Red #E5484D) -->
+<polygon fill="#E5484D" points="14,44 50,15 86,44"></polygon>
+<!-- Overhanging Roof Trim -->
+<polygon fill="#CE2020" points="12,44 50,13 88,44 84,46 50,17 16,46"></polygon>
+<!-- Center Entrance Door (Sky Blue #3B9EFF) -->
+<rect fill="#3B9EFF" height="26" rx="3" width="16" x="42" y="58"></rect>
+<!-- Door knob -->
+<circle cx="46" cy="71" fill="#FFFFFF" r="1.8"></circle>
+<!-- Right Window (Card 1: Sky Blue #3B9EFF) -->
+<rect fill="#3B9EFF" height="12" rx="2" width="12" x="26" y="50"></rect>
+<!-- Right Window Panes -->
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="32" x2="32" y1="50" y2="62"></line>
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="26" x2="38" y1="56" y2="56"></line>
+<!-- Left Window (Card 1: Sky Blue #3B9EFF) -->
+<rect fill="#3B9EFF" height="12" rx="2" width="12" x="62" y="50"></rect>
+<!-- Left Window Panes -->
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="68" x2="68" y1="50" y2="62"></line>
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="62" x2="74" y1="56" y2="56"></line>
+<!-- Attic round accent -->
+<circle cx="50" cy="32" fill="#FFFFFF" r="4"></circle>
+</svg>
+</div>
+<!-- Label Tag -->
+<span class="mt-2 text-caption font-caption text-text-tertiary">تصویر ۱</span>
+</div>
+<!-- CARD 2 (Left in RTL): House with Difference (Left window has Banana Yellow #F5C518 glass) -->
+<div class="flex-1 flex flex-col items-center">
+<div class="w-full aspect-square bg-surface-container-lowest border-[1.5px] border-divider rounded-[16px] p-3 tactile-card flex items-center justify-center relative overflow-hidden transition-all duration-200">
+<!-- Pure Flat 2D Vector House Illustration with Subtle Variant -->
+<svg class="w-full h-full max-w-[124px] max-h-[124px]" fill="none" viewbox="0 0 100 100">
+<!-- Background soft ground patch -->
+<ellipse cx="50" cy="88" fill="#E8F5E8" rx="38" ry="6"></ellipse>
+<!-- Chimney & puff -->
+<rect fill="#CE2020" height="18" rx="2" width="9" x="68" y="24"></rect>
+<circle cx="72.5" cy="18" fill="#D3E4D3" r="4.5"></circle>
+<!-- Main House Body (Orange #FF8A3D) -->
+<rect fill="#FF8A3D" height="42" rx="4" width="56" x="22" y="42"></rect>
+<!-- Red Gabled Roof (Apple Red #E5484D) -->
+<polygon fill="#E5484D" points="14,44 50,15 86,44"></polygon>
+<!-- Overhanging Roof Trim -->
+<polygon fill="#CE2020" points="12,44 50,13 88,44 84,46 50,17 16,46"></polygon>
+<!-- Center Entrance Door (Sky Blue #3B9EFF) -->
+<rect fill="#3B9EFF" height="26" rx="3" width="16" x="42" y="58"></rect>
+<!-- Door knob -->
+<circle cx="46" cy="71" fill="#FFFFFF" r="1.8"></circle>
+<!-- Right Window (Same: Sky Blue #3B9EFF) -->
+<rect fill="#3B9EFF" height="12" rx="2" width="12" x="26" y="50"></rect>
+<!-- Right Window Panes -->
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="32" x2="32" y1="50" y2="62"></line>
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="26" x2="38" y1="56" y2="56"></line>
+<!-- Left Window (DIFFERENCE: Banana Yellow #F5C518 instead of blue) -->
+<rect fill="#F5C518" height="12" rx="2" width="12" x="62" y="50"></rect>
+<!-- Left Window Panes -->
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="68" x2="68" y1="50" y2="62"></line>
+<line stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.2" x1="62" x2="74" y1="56" y2="56"></line>
+<!-- Attic round accent -->
+<circle cx="50" cy="32" fill="#FFFFFF" r="4"></circle>
+</svg>
+</div>
+<!-- Label Tag -->
+<span class="mt-2 text-caption font-caption text-text-tertiary">تصویر ۲</span>
+</div>
+</div>
+</section>
+<!-- Large Accessibility-Focused Touch Answer Controls -->
+<footer class="w-full flex flex-col gap-3">
+<!-- Top Huge Answer Button: 'یکسان' (Same) -->
+<button class="w-full h-[72px] bg-surface-container-lowest border-2 border-[#0E7C3A] rounded-[16px] px-6 flex items-center justify-between shadow-sm hover:bg-success-bg active:scale-[0.98] transition-all duration-150 group" type="button">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-success-bg flex items-center justify-center text-success-text group-hover:bg-[#0E7C3A] group-hover:text-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-2xl font-bold" data-icon="check">check</span>
+</div>
+<span class="text-title font-title text-success-text text-[18px]">یکسان</span>
+</div>
+<span class="text-caption font-label text-success-text opacity-70">کلید ۱</span>
+</button>
+<!-- Bottom Huge Answer Button: 'متفاوت' (Different) -->
+<button class="w-full h-[72px] bg-surface-container-lowest border-2 border-warning-text rounded-[16px] px-6 flex items-center justify-between shadow-sm hover:bg-warning-bg active:scale-[0.98] transition-all duration-150 group" type="button">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-warning-bg flex items-center justify-center text-warning-text group-hover:bg-warning-text group-hover:text-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-2xl font-bold" data-icon="close">close</span>
+</div>
+<span class="text-title font-title text-warning-text text-[18px]">متفاوت</span>
+</div>
+<span class="text-caption font-label text-warning-text opacity-70">کلید ۲</span>
+</button>
+<!-- Bottom Helper / In-game Powerups Utility Row -->
+<div class="w-full flex items-center justify-between pt-1 text-text-tertiary">
+<!-- Lightbulb Hint Pill -->
+<button class="flex items-center gap-1.5 bg-surface-container-lowest border border-divider px-3 py-1.5 rounded-full hover:bg-accent-tint transition-colors active:scale-95 shadow-sm" type="button">
+<span class="material-symbols-outlined text-banana-yellow text-lg" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="font-label text-caption text-text-secondary">راهنما (۲)</span>
+</button>
+<!-- Speed Multiplier Active Badge -->
+<div class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-alt text-accent-fill text-caption font-caption">
+<span class="material-symbols-outlined text-base" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>ضریب سرعت فعال است</span>
+</div>
+</div>
+</footer>
+</main>
+<script>
+    // Lightweight tactile feedback for elderly/kids
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if ('vibrate' in navigator) {
+          navigator.vibrate(30);
+        }
+      });
+    });
+  </script>
+</body></html>

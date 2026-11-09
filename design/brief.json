@@ -1,0 +1,416 @@
+{
+  "title": "Tizbin",
+  "slug": "tizbin",
+  "domain": "gaming",
+  "style": "bright",
+  "allow3D": false,
+  "language": "Persian (fa), full right-to-left layout",
+  "features": [
+    "Easy registration: name, phone number and avatar pick, optional referral code",
+    "User profile with total points and referral link",
+    "Daily competition: 15 challenges, 90-second total active-play limit, one official scored attempt per day",
+    "Five simple visual games with reusable mechanics: find the different picture, which picture disappeared, count identical objects, same or different, match identical pictures",
+    "Automatic scoring: 100 points per correct answer plus a speed bonus from remaining seconds, max 1,590",
+    "Countdown timer shown during play",
+    "Daily leaderboard and monthly leaderboard (best 15 daily scores), ranked by accuracy then speed",
+    "Game history and personal points",
+    "Social sharing of the result and referral invite link",
+    "Basic admin view to review users, flagged scores and the manual prize record",
+    "Server-side score validation and basic abuse prevention (simulated locally)",
+    "Low data usage and offline-tolerant play (assets bundled, result queued until online)"
+  ],
+  "bannedTerms": [
+    "withdraw",
+    "wallet",
+    "deposit",
+    "bet",
+    "gambling",
+    "crypto",
+    "subscription",
+    "premium",
+    "in-app purchase"
+  ],
+  "screenCount": 15,
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": [
+        "Home",
+        "Ranks",
+        "History",
+        "Profile"
+      ],
+      "labelsFa": [
+        "خانه",
+        "رتبه‌ها",
+        "تاریخچه",
+        "پروفایل"
+      ],
+      "icons": [
+        "home",
+        "trophy",
+        "clock",
+        "user"
+      ],
+      "note": "Right-to-left: Home is the RIGHTMOST tab, then Ranks, History, Profile to the left. Flat white bar, 1px top border, no gradient. Active tab: icon + label in accentFill with a small accentTint pill behind the icon; inactive: text.secondary."
+    },
+    "statusBar": "Header row (RTL): greeting or screen title on the right in display style, points chip on the left (star icon + points on accentTint).",
+    "gameHeader": "Full-screen game header (RTL): challenge counter '۳ از ۱۵' on the right, circular countdown timer in the center showing remaining seconds of 90, running score chip on the left. Thin progress bar of 15 segments under it.",
+    "controls": "Primary button: pill, 56px tall, accentFill with white label (pressed darker, disabled 40% opacity). Secondary button: pill, white with 1.5px borderStrong border, ink label. Text input: 12px radius, 52px, white, borderStrong border, focus = 2px accentFill ring, error = danger border + 13px helper. Card: white, 20px radius, soft shadow. Chip: pill, 32px, accentTint fill with accentFill text, 13px. Game tile: 16px radius white card with 1.5px border, holds one big flat 2D vector object (fruit, animal, shape); selected-correct = success tint + check, wrong = danger tint + x. Answer buttons are big (min 64px tall) for kids and elderly."
+  },
+  "screens": [
+    {
+      "name": "welcome",
+      "purpose": "First launch: what the game is and one big start button",
+      "content": "Real photo hero of a smiling grandmother and her young grandson playing a game together on one phone on a sofa, warm daylight; app name Tizbin in Persian 'تیزبین'; headline 'هر روز ۹۰ ثانیه، ۱۵ چالش' (Every day 90 seconds, 15 challenges); subline 'ببین، بشمار، پیدا کن و جایزه ببر' (Look, count, find and win prizes); primary button 'شروع کنیم' (Let's start); text button 'قبلا ثبت‌نام کرده‌ام' (I already have an account)",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "register",
+      "purpose": "Create a profile in one step",
+      "content": "Title 'ساخت پروفایل' (Create profile); row of 6 round real-photo avatars to pick, one selected with accent ring; inputs: name 'سارا احمدی', mobile number '۰۹۱۲ ۳۴۵ ۶۷۸۹', optional referral code 'TZB-4821' with small success check 'کد معرف معتبر است'; primary 'ثبت‌نام و ورود' (Register and enter); footnote 'با ادامه، قوانین مسابقه را می‌پذیرم' (I accept the competition rules)",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "home",
+      "purpose": "Daily dashboard: start today's one official attempt",
+      "content": "Header: 'سلام سارا' greeting right, points chip '۸٬۴۲۰' left; FOCAL hero gradient card 'مسابقه امروز' with 3 facts '۱۵ چالش', '۹۰ ثانیه', 'حداکثر ۱٬۵۹۰ امتیاز', big white pill button 'شروع بازی' and caption 'فقط یک تلاش رسمی در روز'; row 'بازی‌های امروز' with 5 small flat icon tiles (eye 'تفاوت', ghost 'ناپدید', number 'شمارش', two squares 'یکسان؟', cards 'جفت‌ها'); card 'رتبه دیروز: ۴۲ از ۳٬۱۸۰'; card 'جدول ماهانه: ۸ از ۱۵ روز ثبت شده' with progress bar",
+      "group": "core",
+      "nav": "Home",
+      "states": [
+        "default",
+        "done"
+      ]
+    },
+    {
+      "name": "home-done",
+      "purpose": "Home after today's attempt is used",
+      "content": "Same header; FOCAL card 'امتیاز امروز ۱٬۲۴۰' with '۱۲ از ۱۵ درست' and countdown 'مسابقه بعدی تا ۰۷:۱۲:۴۵'; secondary button 'اشتراک‌گذاری نتیجه' (Share result); card 'رتبه فعلی امروز: ۱۸'; card 'دوستانت را دعوت کن' with referral link",
+      "group": "core",
+      "nav": "Home",
+      "states": [
+        "done"
+      ]
+    },
+    {
+      "name": "game-find-different",
+      "purpose": "Game 1: tap the one picture that is different",
+      "content": "gameHeader with '۱ از ۱۵', timer '۸۴', score '۰'; prompt 'کدام تصویر فرق دارد؟' (Which picture is different?); FOCAL 3x3 grid of big tiles each with a flat red apple, one tile has a green apple; no bottom bar",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "game-disappeared",
+      "purpose": "Game 2: remember which picture disappeared",
+      "content": "gameHeader '۴ از ۱۵', timer '۶۹', score '۳۹۰'; prompt 'کدام تصویر ناپدید شد؟' (Which picture disappeared?); FOCAL row of 4 tiles (cat, fish, sun, empty dashed tile where one vanished); below 3 big answer tiles (bird, flower, ball) to choose from",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "game-count",
+      "purpose": "Game 3: count identical objects",
+      "content": "gameHeader '۷ از ۱۵', timer '۵۱', score '۷۳۵'; prompt 'چند ستاره می‌بینی؟' (How many stars do you see?); FOCAL white card with 6 flat yellow stars scattered among circles and hearts; 4 big number buttons '۴' '۵' '۶' '۷' in a 2x2 grid",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "game-same-different",
+      "purpose": "Game 4: decide if two pictures are the same or different",
+      "content": "gameHeader '۱۰ از ۱۵', timer '۳۴', score '۱٬۰۱۰'; prompt 'این دو تصویر یکسان‌اند؟' (Are these two pictures the same?); FOCAL two large side-by-side cards each with a flat house drawing, one with a different window color; two huge buttons 'یکسان' (Same, success outline with check icon) and 'متفاوت' (Different, accent outline with x icon)",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "game-match",
+      "purpose": "Game 5: match identical pictures",
+      "content": "gameHeader '۱۳ از ۱۵', timer '۱۶', score '۱٬۲۰۰'; prompt 'جفت‌های یکسان را پیدا کن' (Find the matching pairs); FOCAL 3x4 grid of cards: 2 matched pairs shown face-up with success tint (banana, banana, car, car), 2 flipped face-up (duck, duck being matched), rest face-down with accent pattern backs",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "result",
+      "purpose": "Score summary after the 15 challenges, share and invite",
+      "content": "FOCAL big '۱٬۲۴۰' score numeral on gradient circle with 'از ۱٬۵۹۰'; title 'آفرین سارا!' (Well done); stats row: '۱۲ از ۱۵ درست', 'پاداش سرعت ۴۰', 'زمان ۸۶ ثانیه'; chip 'رتبه امروز: ۱۸'; caption 'امتیاز روی سرور تایید شد' with shield-check icon; primary 'اشتراک‌گذاری نتیجه'; secondary 'دیدن جدول امتیازات'",
+      "group": "detail",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "leaderboard",
+      "purpose": "Daily and monthly rankings",
+      "content": "Title 'رتبه‌بندی'; segmented control 'روزانه' (selected) / 'ماهانه'; caption 'رتبه بر اساس پاسخ درست، سپس سرعت'; FOCAL podium with 3 real-photo avatars: ۱ رضا کریمی ۱٬۵۴۰, ۲ مریم حسینی ۱٬۵۱۰, ۳ علی رضایی ۱٬۴۹۰; list rows 4-8 with avatar, name, correct count '۱۵/۱۵', score; pinned own row highlighted in accentTint '۱۸ سارا احمدی ۱٬۲۴۰'",
+      "group": "core",
+      "nav": "Ranks",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "history",
+      "purpose": "Past daily attempts and personal points",
+      "content": "Title 'تاریخچه'; FOCAL stat card 'مجموع امتیاز ۸٬۴۲۰' with 'بهترین امتیاز ۱٬۴۸۰' and 'روزهای بازی ۸'; list of daily rows: date '۱۸ آبان' score '۱٬۲۴۰' '۱۲/۱۵' rank '۱۸'; '۱۷ آبان' '۱٬۴۸۰' '۱۴/۱۵' rank '۶'; '۱۶ آبان' '۹۸۰' '۱۰/۱۵' rank '۲۱۰'; '۱۵ آبان' '۱٬۱۲۰'; each with a small mini bar",
+      "group": "core",
+      "nav": "History",
+      "states": [
+        "default",
+        "empty"
+      ]
+    },
+    {
+      "name": "history-empty",
+      "purpose": "History before the first game",
+      "content": "Title 'تاریخچه'; real photo of a cup of tea and a phone on a wooden table in morning light; title 'هنوز بازی نکرده‌ای' (You have not played yet); body 'اولین مسابقه روزانه را شروع کن'; primary 'شروع بازی'",
+      "group": "core",
+      "nav": "History",
+      "states": [
+        "empty"
+      ]
+    },
+    {
+      "name": "profile",
+      "purpose": "Profile, referral link and settings",
+      "content": "FOCAL real-photo avatar of Sara with name 'سارا احمدی' and phone '۰۹۱۲***۶۷۸۹'; stats row 'امتیاز کل ۸٬۴۲۰', 'دعوت‌ها ۵', 'بهترین رتبه ۶'; referral card 'لینک دعوت تو' with code 'TZB-4821', copy icon and button 'اشتراک‌گذاری'; settings rows: 'صدا' toggle, 'اندازه متن بزرگ' toggle, 'قوانین مسابقه', 'پشتیبانی', 'خروج'; small row 'پنل مدیریت' with shield icon",
+      "group": "settings",
+      "nav": "Profile",
+      "states": [
+        "default"
+      ]
+    },
+    {
+      "name": "admin",
+      "purpose": "Basic admin: review users, flagged scores and the manual prize record",
+      "content": "Top bar with back arrow and title 'پنل مدیریت'; FOCAL stat row: 'کاربران ۳٬۱۸۰', 'بازی امروز ۲٬۴۵۶', 'مشکوک ۳'; section 'امتیازهای مشکوک' list: 'کاربر #۲۲۹۱ - ۱٬۵۹۰ در ۱۱ ثانیه' warning chip 'خیلی سریع' with buttons 'رد' and 'تایید'; section 'ثبت جوایز (دستی)' rows: 'مهر - نفر اول - رضا کریمی - در انتظار تایید'; info banner 'پرداخت خودکار غیرفعال است تا تایید حقوقی' (automatic payout disabled until legal approval)",
+      "group": "settings",
+      "nav": "none",
+      "states": [
+        "default"
+      ]
+    }
+  ],
+  "designSystem": {
+    "variant": "P73",
+    "theme": "light",
+    "frame": "393x852 mobile, top inset 59px, bottom inset 34px, right-to-left layout",
+    "color": {
+      "background": "#F4FCF4",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#E8F5E8",
+      "accent": "#107C10",
+      "accentFill": "#0F770F",
+      "accentTint": "#DDF0DD",
+      "accentPressed": "#0E6D0E",
+      "support": "#CDB4FF",
+      "text": {
+        "primary": "#0C1F0C",
+        "secondary": "#455745",
+        "tertiary": "#5C705C"
+      },
+      "border": "#D3E4D3",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "gradient": [
+        "#0F770F",
+        "#0E6D0E"
+      ],
+      "statusOn": {
+        "warning": {
+          "fg": "#A75906",
+          "tint": "#FAEFE1"
+        },
+        "success": {
+          "fg": "#0E7C3A",
+          "tint": "#E3F4E9"
+        },
+        "danger": {
+          "fg": "#CE2020",
+          "tint": "#FBE5E5"
+        },
+        "info": {
+          "fg": "#0F770F",
+          "tint": "#E2EFE2"
+        }
+      },
+      "supportStrong": "#A978FF",
+      "borderStrong": "#6DA06D"
+    },
+    "type": {
+      "fontFamily": "Vazirmatn",
+      "displayFamily": "Vazirmatn",
+      "numeralFamily": "Vazirmatn",
+      "fontNote": "Picked row font Exo 2 / Saira Condensed has no Persian glyphs; Vazirmatn (Google Font, OFL) is used for the required Persian RTL script.",
+      "display": "32 / 800 / 0",
+      "title": "20 / 700",
+      "body": "16 / 400",
+      "label": "14 / 600",
+      "caption": "13 / 500",
+      "minSize": "12px (13px chips and tags, 14px safety or legal text)",
+      "scaleRule": "Use only the 5 declared sizes (display, title, body, label, caption)."
+    },
+    "radius": {
+      "card": 20,
+      "control": 14,
+      "input": 12,
+      "pill": 999
+    },
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32); screen edge padding 20px",
+    "elevation": "card = 0 1px 2px rgba(12,31,12,.04) + 0 8px 24px rgba(12,31,12,.06)",
+    "icons": "Lucide rounded outline, 24px, 1.75 stroke",
+    "a11y": "white labels only on accentFill; text on gradients >= 4.5:1; tap targets >= 44pt (game answers >= 64px)"
+  },
+  "tokenCheck": {
+    "results": [
+      {
+        "pair": "text.primary on background",
+        "ratio": 16.5,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.primary on surface",
+        "ratio": 17.26,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on background",
+        "ratio": 7.43,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on surface",
+        "ratio": 7.77,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on background",
+        "ratio": 5.11,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on surface",
+        "ratio": 5.35,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white label on accentFill (buttons)",
+        "ratio": 5.37,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "accentFill text on accentTint (chips, selected)",
+        "ratio": 4.49,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0F770F",
+        "after": 4.8
+      },
+      {
+        "pair": "accentFill as link text on background",
+        "ratio": 5.48,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white on hero gradient (both stops)",
+        "ratio": 5.73,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "warning text on its tint and on surface",
+        "ratio": 2.81,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#A75906",
+        "after": 4.54
+      },
+      {
+        "pair": "success text on its tint and on surface",
+        "ratio": 2.89,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0E7C3A",
+        "after": 4.64
+      },
+      {
+        "pair": "danger text on its tint and on surface",
+        "ratio": 4.01,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#CE2020",
+        "after": 4.53
+      },
+      {
+        "pair": "support as chart line / icon on surface (non-text 3:1)",
+        "ratio": 1.82,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#A978FF",
+        "after": 3.08
+      },
+      {
+        "pair": "input / control border on surface (non-text 3:1)",
+        "ratio": 1.33,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#6DA06D",
+        "after": 3.04
+      }
+    ],
+    "changed": {
+      "accentFill": {
+        "from": "#107C10",
+        "to": "#0F770F"
+      }
+    },
+    "passed": true
+  }
+}

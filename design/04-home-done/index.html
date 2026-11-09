@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>تیزبین - داشبورد روزانه</title>
+<!-- Persian Font: Vazirmatn -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary": "#ffffff",
+            "surface": "#f9f9f9",
+            "surface-container-high": "#e8e8e8",
+            "accent-tint": "#DDF0DD",
+            "surface-tint": "#006e06",
+            "support-strong": "#A978FF",
+            "primary": "#005c04",
+            "tertiary-fixed": "#eaddff",
+            "primary-fixed-dim": "#7bdc6b",
+            "primary-container": "#0f770f",
+            "tertiary-fixed-dim": "#d2bbff",
+            "surface-alt": "#E8F5E8",
+            "apple-red": "#E5484D",
+            "sky-blue": "#3B9EFF",
+            "on-surface-variant": "#3f4a3b",
+            "surface-variant": "#e2e2e2",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#007306",
+            "secondary": "#006e06",
+            "error-container": "#ffdad6",
+            "divider": "#D3E4D3",
+            "surface-dim": "#dadada",
+            "secondary-fixed-dim": "#79dd68",
+            "on-primary-fixed-variant": "#005303",
+            "outline-variant": "#bfcab7",
+            "tertiary-container": "#705a9e",
+            "inverse-primary": "#7bdc6b",
+            "on-secondary-fixed": "#002200",
+            "success-bg": "#E3F4E9",
+            "primary-fixed": "#97fa84",
+            "background": "#F4FCF4",
+            "outline": "#6f7a6a",
+            "on-error": "#ffffff",
+            "warning-bg": "#FAEFE1",
+            "banana-yellow": "#F5C518",
+            "danger-bg": "#FBE5E5",
+            "on-surface": "#1a1c1c",
+            "on-tertiary-fixed-variant": "#503b7c",
+            "text-secondary": "#455745",
+            "secondary-container": "#91f77e",
+            "on-tertiary-fixed": "#230a4e",
+            "danger-text": "#CE2020",
+            "on-secondary-fixed-variant": "#005303",
+            "on-secondary": "#ffffff",
+            "accent-fill": "#0F770F",
+            "on-tertiary-container": "#ecdfff",
+            "on-background": "#1a1c1c",
+            "orange": "#FF8A3D",
+            "on-primary-container": "#99fc86",
+            "tertiary": "#574284",
+            "on-primary-fixed": "#002201",
+            "surface-container-low": "#f3f3f4",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#94fa81",
+            "on-primary": "#ffffff",
+            "control-border": "#6DA06D",
+            "text-primary": "#0C1F0C",
+            "surface-container": "#eeeeee",
+            "accent-pressed": "#0E6D0E",
+            "surface-bright": "#f9f9f9",
+            "success-text": "#0E7C3A",
+            "warning-text": "#A75906",
+            "text-tertiary": "#5C705C",
+            "surface-container-highest": "#e2e2e2",
+            "inverse-surface": "#2f3131",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f0f1f1"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-md": "0.75rem",
+            "margin": "1.25rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1rem"
+          },
+          "fontFamily": {
+            "display": ["Vazirmatn", "sans-serif"],
+            "caption": ["Vazirmatn", "sans-serif"],
+            "title": ["Vazirmatn", "sans-serif"],
+            "body": ["Vazirmatn", "sans-serif"],
+            "label": ["Vazirmatn", "sans-serif"]
+          },
+          "fontSize": {
+            "display": ["32px", { "lineHeight": "40px", "fontWeight": "800" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .soft-card-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 12, 0.04), 0 8px 24px rgba(12, 31, 12, 0.06);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint">
+<!-- Mobile Viewport Frame (393px width fixed experience) -->
+<main class="w-full max-w-[393px] min-h-screen bg-background relative flex flex-col pb-28">
+<!-- Top Status & Safe Space Area -->
+<header class="w-full pt-6 px-5 pb-3">
+<!-- Shared TopAppBar Container (from JSON specs) -->
+<div class="flex justify-between items-center w-full">
+<!-- Right side (RTL Start): Avatar & Friendly Greeting -->
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-surface-container-lowest soft-card-shadow flex-shrink-0">
+<img alt="تصویر پروفایل کاربر سارا" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrCQpSo-_nKFnoDthJSjvoX4ylcMSA98tpkHNQoIkiDKaF2X6f1YL3uymo_xa7OjGrDvdyhXqPw6kLa7Ers4nbAA6sX-eGWI-4cqnAcwfcKSuPdE6Qm1UsOyZYbp0UIBAi_DPWyUTBjJFs5hfoNYKVm1_VZhleGql9kX0RYVC0o-JkkHHozaf6jmRkuPbe07E_Efpgn-8yel_XGQU9kF2N5yPUDCwH7V9GXMxE3RdUwoOba8-IL5qdU_iw-SWQ"/>
+</div>
+<div class="flex flex-col">
+<h1 class="text-title font-title text-text-primary tracking-tight leading-tight">سلام سارا</h1>
+<p class="text-caption font-caption text-text-secondary mt-0.5">خسته نباشی!</p>
+</div>
+</div>
+<!-- Left side (RTL End): Points Pill Chip -->
+<div class="inline-flex items-center gap-1.5 bg-accent-tint text-accent-fill px-3 py-1.5 rounded-full border border-divider">
+<span class="material-symbols-outlined fill-icon text-banana-yellow text-[18px]" data-icon="star" data-weight="fill">star</span>
+<span class="text-label font-label text-accent-fill tracking-wide font-bold">۹٬۶۶۰</span>
+</div>
+</div>
+</header>
+<!-- Content Canvas Container -->
+<section class="flex flex-col gap-4 px-5 pt-2">
+<!-- 1. Focal Element - Big Result White Card -->
+<article class="bg-surface-container-lowest rounded-[20px] p-5 soft-card-shadow border border-divider/60 relative overflow-hidden flex flex-col items-center text-center">
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-1.5 bg-success-bg text-success-text px-3.5 py-1.5 rounded-full mb-4">
+<span class="material-symbols-outlined fill-icon text-[18px]" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-caption font-caption font-bold">بازی امروز انجام شد</span>
+</div>
+<!-- Big Hero Score Display -->
+<div class="my-1">
+<span class="text-[44px] leading-[48px] font-extrabold text-accent-fill tracking-tight font-display">۱٬۲۴۰</span>
+</div>
+<p class="text-label font-label text-text-secondary mb-4">امتیاز امروز • ۱۲ از ۱۵ درست</p>
+<!-- Hairline Divider -->
+<div class="w-full h-[1px] bg-divider my-2"></div>
+<!-- Next Match Countdown Info -->
+<div class="w-full flex items-center justify-between py-2 px-1 text-text-secondary">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="schedule">schedule</span>
+<span class="text-caption font-caption text-text-secondary">مسابقه بعدی تا</span>
+</div>
+<span class="text-body font-body font-bold text-text-primary tracking-wider dir-ltr" id="countdown">۰۷:۱۲:۴۵</span>
+</div>
+<!-- Secondary Pill Button (Share action) -->
+<button class="w-full h-[50px] mt-3 rounded-full border-[1.5px] border-control-border bg-surface-container-lowest text-text-primary flex items-center justify-center gap-2 active:scale-95 active:bg-surface-alt transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-text-primary text-[20px]" data-icon="share">share</span>
+<span class="text-label font-label font-bold text-text-primary">اشتراک‌گذاری نتیجه</span>
+</button>
+</article>
+<!-- 2. Daily Standing Card -->
+<article class="bg-surface-container-lowest rounded-[20px] p-4 soft-card-shadow border border-divider/60 flex items-center justify-between">
+<div class="flex items-center gap-3.5">
+<div class="w-12 h-12 rounded-full bg-accent-tint flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-accent-fill text-[26px]" data-icon="emoji_events">emoji_events</span>
+</div>
+<div class="flex flex-col text-right">
+<div class="flex items-center gap-2">
+<h2 class="text-body font-body font-bold text-text-primary">رتبه فعلی امروز: ۱۸</h2>
+<span class="inline-block bg-accent-tint text-accent-fill text-[11px] font-bold px-2 py-0.5 rounded-full">جزو ۱٪ برتر</span>
+</div>
+<p class="text-caption font-caption text-text-secondary mt-0.5">بین ۳٬۱۸۰ شرکت‌کننده فعال</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]" data-icon="arrow_back_ios">arrow_back_ios</span>
+</article>
+<!-- 3. Referral / Invite Friends Card -->
+<article class="bg-surface-container-lowest rounded-[20px] p-4 soft-card-shadow border border-divider/60 relative overflow-hidden flex flex-col gap-3">
+<!-- Decorative subtle lavender accent bar -->
+<div class="absolute top-0 right-0 bottom-0 w-1.5 bg-tertiary-fixed-dim rounded-r-[20px]"></div>
+<div class="flex items-start justify-between pr-2">
+<div class="flex flex-col text-right">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]" data-icon="card_giftcard">card_giftcard</span>
+<h3 class="text-body font-body font-bold text-text-primary">دوستانت را دعوت کن</h3>
+</div>
+<p class="text-caption font-caption text-text-secondary mt-1">هر دعوت ۵۰ امتیاز هدیه برای هر دوی شما</p>
+</div>
+</div>
+<div class="flex items-center justify-between gap-3 pr-2 pt-1">
+<!-- Referral Code Chip -->
+<div class="flex items-center justify-between flex-1 bg-surface border border-dashed border-control-border rounded-xl px-3.5 py-2.5">
+<span class="text-caption font-caption text-text-tertiary">کد معرف:</span>
+<span class="font-mono font-bold text-text-primary text-[15px] tracking-widest dir-ltr">TZB-4821</span>
+</div>
+<!-- Small Primary Pill Button -->
+<button class="h-10 px-5 rounded-full bg-primary-container text-on-primary font-label text-label active:scale-95 active:bg-accent-pressed transition-all duration-150 flex items-center justify-center flex-shrink-0 shadow-sm" type="button">
+            دعوت
+          </button>
+</div>
+</article>
+<!-- Motivation Banner / Mini Insight -->
+<div class="bg-surface-alt/70 border border-divider rounded-[16px] p-3.5 flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-fill text-[22px]" data-icon="lightbulb">lightbulb</span>
+<p class="text-caption font-caption text-text-secondary leading-relaxed">
+          فردا ساعت ۸ صبح معماهای تصویری جدید منتشر می‌شوند. هوشیار باش!
+        </p>
+</div>
+</section>
+<!-- 4. Shared Bottom Navigation Bar (Docked bottom, fixed 4 RTL items) -->
+<nav class="fixed bottom-0 right-0 left-0 max-w-[393px] mx-auto z-50 bg-surface-container-lowest border-t border-divider px-4 pb-7 pt-2 flex justify-around items-center rtl shadow-sm">
+<!-- Tab 1: خانه (Active) -->
+<a class="flex flex-col items-center justify-center bg-accent-tint text-primary rounded-full px-4 py-1.5 active:scale-95 transition-transform duration-150" href="#home">
+<span class="material-symbols-outlined fill-icon text-[24px] text-accent-fill" data-icon="home" data-weight="fill">home</span>
+<span class="text-caption font-caption font-bold text-accent-fill mt-0.5">خانه</span>
+</a>
+<!-- Tab 2: رتبه‌ها (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:text-primary active:scale-95 transition-all duration-150" href="#leaderboard">
+<span class="material-symbols-outlined text-[24px]" data-icon="leaderboard">leaderboard</span>
+<span class="text-caption font-caption text-text-secondary mt-0.5">رتبه‌ها</span>
+</a>
+<!-- Tab 3: تاریخچه (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:text-primary active:scale-95 transition-all duration-150" href="#history">
+<span class="material-symbols-outlined text-[24px]" data-icon="history">history</span>
+<span class="text-caption font-caption text-text-secondary mt-0.5">تاریخچه</span>
+</a>
+<!-- Tab 4: پروفایل (Inactive) -->
+<a class="flex flex-col items-center justify-center text-text-secondary px-3 py-1.5 hover:text-primary active:scale-95 transition-all duration-150" href="#profile">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="text-caption font-caption text-text-secondary mt-0.5">پروفایل</span>
+</a>
+</nav>
+</main>
+<!-- Interactive Lightweight Script for Countdown Micro-interaction -->
+<script>
+    (function initTimer() {
+      let totalSeconds = 7 * 3600 + 12 * 60 + 45;
+      const el = document.getElementById('countdown');
+      if (!el) return;
+
+      const toPersianDigits = (numStr) => {
+        const pDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+        return numStr.replace(/\d/g, d => pDigits[d]);
+      };
+
+      setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          const hrs = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+          const mins = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+          const secs = String(totalSeconds % 60).padStart(2, '0');
+          el.textContent = toPersianDigits(`${hrs}:${mins}:${secs}`);
+        }
+      }, 1000);
+    })();
+  </script>
+</body></html>
