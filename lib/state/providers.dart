@@ -44,20 +44,6 @@ class Session extends Notifier<Player?> {
 
 final sessionProvider = NotifierProvider<Session, Player?>(Session.new);
 
-final historyProvider = Provider<List<DailyResult>>((ref) {
-  ref.watch(revisionProvider);
-  final me = ref.watch(sessionProvider);
-  return me == null ? const [] : ref.watch(serverProvider).history(me.id);
-});
-
-final totalPointsProvider = Provider<int>((ref) => ref.watch(historyProvider).fold(0, (s, r) => s + r.score));
-
-final playedTodayProvider = Provider<bool>((ref) {
-  ref.watch(revisionProvider);
-  final me = ref.watch(sessionProvider);
-  return me != null && ref.watch(serverProvider).hasPlayed(me.id, ref.watch(todayProvider));
-});
-
 enum BoardMode { daily, monthly }
 
 class BoardModeNotifier extends Notifier<BoardMode> {
@@ -67,13 +53,6 @@ class BoardModeNotifier extends Notifier<BoardMode> {
 }
 
 final boardModeProvider = NotifierProvider<BoardModeNotifier, BoardMode>(BoardModeNotifier.new);
-
-final boardProvider = Provider<List<LeaderRow>>((ref) {
-  ref.watch(revisionProvider);
-  final server = ref.watch(serverProvider);
-  final day = ref.watch(todayProvider);
-  return ref.watch(boardModeProvider) == BoardMode.daily ? server.daily(day) : server.monthly(day);
-});
 
 class TabIndex extends Notifier<int> {
   @override
@@ -274,15 +253,13 @@ final gameProvider = NotifierProvider<Game, GameState?>(Game.new);
 
 class Flags extends Notifier<List<ScoreFlag>> {
   @override
-  List<ScoreFlag> build() {
-    ref.watch(revisionProvider);
-    return [...ref.watch(serverProvider).data.flags];
-  }
+  List<ScoreFlag> build() => [...ref.read(serverProvider).data.flags];
 
   void decide(String id, FlagStatus status) {
     final flags = ref.read(serverProvider).data.flags;
     final i = flags.indexWhere((f) => f.id == id);
     if (i >= 0) flags[i] = flags[i].copyWith(status: status);
+    state = [...flags];
     ref.read(revisionProvider.notifier).bump();
   }
 }
@@ -304,3 +281,31 @@ class PrefsNotifier extends Notifier<Prefs> {
 }
 
 final prefsProvider = NotifierProvider<PrefsNotifier, Prefs>(PrefsNotifier.new);
+
+// ---------------------------------------------------------------------------
+// Derived reads. Plain functions over WidgetRef instead of derived providers: Riverpod 3
+// pauses providers under offstage tabs and covered routes, and a paused derived provider
+// that recomputes on resume would schedule a rebuild in the middle of a frame.
+
+extension Derived on WidgetRef {
+  List<DailyResult> history() {
+    watch(revisionProvider);
+    final me = watch(sessionProvider);
+    return me == null ? const [] : watch(serverProvider).history(me.id);
+  }
+
+  int totalPoints() => history().fold(0, (s, r) => s + r.score);
+
+  bool playedToday() {
+    watch(revisionProvider);
+    final me = watch(sessionProvider);
+    return me != null && watch(serverProvider).hasPlayed(me.id, watch(todayProvider));
+  }
+
+  List<LeaderRow> board() {
+    watch(revisionProvider);
+    final server = watch(serverProvider);
+    final day = watch(todayProvider);
+    return watch(boardModeProvider) == BoardMode.daily ? server.daily(day) : server.monthly(day);
+  }
+}
